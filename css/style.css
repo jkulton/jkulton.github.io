@@ -1,0 +1,18 @@
+.container {
+  left:25%;
+  width:50%;
+  height:50%;
+  top:25%;
+  position:absolute;
+  text-align:center;
+}
+
+.no {
+  text-align:center;
+  line-height:250%;
+  font-family:Helvetica;
+  font-weight:bold;
+  font-size:10em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  
+}
