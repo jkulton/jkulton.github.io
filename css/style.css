@@ -7,6 +7,14 @@
   text-align:center;
 }
 
+.tapMe {
+  margin-top:-80px;
+  font-family:Helvetica;
+  font-weight:bold;
+  font-size:2em;
+  opacity:.25;
+}
+
 .no {
   text-align:center;
   line-height:250%;
