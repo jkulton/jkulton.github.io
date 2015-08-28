@@ -8,10 +8,6 @@ body {
   background-color:#E9EAED; 
 }
 
-.container-fluid {
-  padding:none !important;
-}
-
 .wrap {
   padding:20px 50px;
 }
@@ -30,11 +26,15 @@ body {
 
 .color-block {
   height:150px;
-  padding:10px;
+  /*padding:10px;*/
+  transition:all 0.2s ease-in-out;
 }
 
-.grow { transition: all 0.1s ease-in-out; }
-.grow:hover { transform: scale(1.02);z-index:100000;box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);}
+.color-block:hover {
+  transform: scale(1.05);
+  z-index:100000;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
 
 .color-label {
   font-size:1.6em;
