@@ -1,0 +1,273 @@
+/* Font Import */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/* Site Layout */
+
+body {
+  background-color:#E9EAED; 
+}
+
+.container-fluid {
+  padding:none !important;
+}
+
+.wrap {
+  padding:20px 50px;
+}
+
+.row {
+  background-color:#fff;
+  padding:20px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24)
+}
+
+.footer {
+  margin-top:40px;
+}
+
+/* Block Styling */
+
+.color-block {
+  height:150px;
+  padding:10px;
+}
+
+.grow { transition: all 0.1s ease-in-out; }
+.grow:hover { transform: scale(1.02);z-index:100000;box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);}
+
+.color-label {
+  font-size:1.6em;
+  position:relative;
+  top:50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  font-family:'Montserrat';
+}
+
+.text-white {
+  color:white;
+}
+
+/* Block Colors */
+
+.dark-gray {
+  background-color:#7c7c7c;
+}
+
+.gray {
+  background-color:#bcbcbc;
+}
+
+.light-gray {
+  background-color:#f8f8f8;
+}
+
+.pure-blue-dark {
+  background-color:#0000fc;
+}
+
+.pure-blue-light {
+  background-color:#0078f8;
+}
+
+.soft-blue {
+  background-color:#a4e4fc;
+}
+
+.strong-blue {
+  background-color:#0000bc;
+}
+
+.pure-blue-2 {
+  background-color:#0058f8;
+}
+
+.soft-blue-purple {
+  background-color:#6888fc;
+}
+
+.soft-blue-purple-purple {
+  background-color:#b8b8f8;
+}
+
+.strong-blue-purple {
+  background-color:#4428bc;
+}
+
+.bright-blue-purple {
+  background-color:#6844fc;
+}
+
+.soft-purple {
+  background-color:#9878f8;
+}
+
+.soft-violet {
+  background-color:#d8b8f8;
+}
+
+.dark-magenta {
+  background-color: #940048;
+}
+
+.strong-magenta {
+  background-color: #d800cc;
+}
+
+.strong-pink {
+  background-color: #f878f8;
+}
+
+.soft-magenta {
+  background-color: #f8b8f8;
+}
+
+.dark-red {
+  background-color: #a80020;
+}
+
+.pure-pink {
+  background-color: #e40058;
+}
+
+.soft-pink {
+  background-color: #f85898;
+}
+
+.very-soft-pink {
+  background-color: #f8a4c0;
+}
+
+.dark-red-2 {
+  background-color: #a81000;
+}
+
+.pure-red {
+  background-color: #f83800;
+}
+
+.soft-red {
+  background-color: #f87858;
+}
+
+.very-soft-orange {
+  background-color: #f0d0b0;
+}
+
+.dark-red-3 {
+  background-color: #881400;
+}
+
+.vivid-orange {
+  background-color: #e45c10;
+}
+
+.bright-orange {
+  background-color: #fca044;
+}
+
+.very-soft-orange-2 {
+  background-color: #fce0a8;
+}
+
+.brown {
+  background-color: #503000;
+}
+
+.dark-orange {
+  background-color: #ac7c00;
+}
+
+.pure-orange {
+  background-color: #f8b800;
+}
+
+.soft-yellow {
+  background-color: #f8d878;
+}
+
+.dark-lime-green {
+  background-color: #007800;
+}
+
+.strong-lime-green {
+  background-color: #00b800;
+}
+
+.vivid-green {
+  background-color: #b8f818;
+}
+
+.soft-green {
+  background-color: #d8f878;
+}
+
+.very-dark-lime-green {
+  background-color: #006800;
+}
+
+.dark-lime-green-2 {
+  background-color:#00a800;
+}
+
+.moderate-lime-green {
+  background-color: #58d854;
+}
+
+.very-soft-lime-green {
+  background-color: #b8f8b8;
+}
+
+.very-dark-lime-green-2 {
+  background-color: #005800;
+}
+
+.dark-cyan-lime-green {
+  background-color: #00a844;
+}
+
+.soft-cyan-lime-green {
+  background-color: #58f898;
+}
+
+.very-soft-cyan-lime-green {
+  background-color: #b8f8d8;
+}
+
+.very-dark-blue {
+  background-color: #004058;
+}
+
+.dark-cyan {
+  background-color:#008888;
+}
+
+.cyan {
+  background-color: #00e8d8;
+}
+
+.pure-cyan {
+  background-color:#00fcfc;
+}
+
+.dark-gray-2 {
+  background-color: #787878;
+}
+
+.light-gray-2 {
+  background-color: #d8d8d8;
+}
+
+.black {
+  background-color:#000000;
+}
+
+/* Mobile Padding Fix */
+
+@media (max-width: 992px) {
+  .wrap {
+    padding:20px;
+  }
+}
