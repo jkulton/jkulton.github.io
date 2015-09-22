@@ -20,6 +20,7 @@ html, body, .container-fluid, .row {
 	align-items: center;
 	-webkit-justify-content:center;
 	justify-content: center;
+	margin:0;
 }
 
 svg {
