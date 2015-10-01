@@ -1,0 +1,274 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"color-bloc",
+				"color-block-active"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text-",
+				"text-align"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 347.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jkulton/GitHub/jkulton.github.io/index.html",
+		"/Users/jkulton/GitHub/jkulton.github.io/famicolors/css/style.css",
+		"/Users/jkulton/GitHub/jkulton.github.io/famicolors/index.html",
+		"/Users/jkulton/NetBeansProjects/Tutorial1/src/Addition.java",
+		"/Users/jkulton/GitHub/jkulton.github.io/famicolors/js/copyhex.js",
+		"/Users/jkulton/GitHub/jkulton.github.io/famicolors/js/clipboard.js",
+		"/Users/jkulton/GitHub/jkulton.github.io/css/style.css",
+		"/Users/jkulton/Downloads/codepen_mebqbR/index.html",
+		"/Users/jkulton/Desktop/NES COLORS/css/reset.css",
+		"/Users/jkulton/Downloads/noun_29901.svg",
+		"/Users/jkulton/GitHub/jkultonportfolio.github.io/famicolors/css/style.css",
+		"/Users/jkulton/GitHub/jkultonportfolio.github.io/index.html",
+		"/Users/jkulton/Desktop/NES COLORS/index.html",
+		"/Users/jkulton/Desktop/NES COLORS/css/style.css",
+		"/Users/jkulton/GitHub/jkultonportfolio.github.io/css/style.css",
+		"/Users/jkulton/jekyll/_site/index.html",
+		"/Users/jkulton/GitHub/FreeCodeCamp/server/boot/home.js",
+		"/Users/jkulton/GitHub/FreeCodeCamp/server/config.local.js",
+		"/Users/jkulton/GitHub/FreeCodeCamp/server/production-start.js",
+		"/Users/jkulton/GitHub/FreeCodeCamp/server/server.js",
+		"/Users/jkulton/GitHub/FreeCodeCamp/gulpfile.js",
+		"/Users/jkulton/GitHub/FreeCodeCamp/node_modules/mongodb/lib/mongo_client.js",
+		"/Users/jkulton/GitHub/FreeCodeCamp/node_modules/mongodb/conf.json",
+		"/Users/jkulton/GitHub/FreeCodeCamp/.env",
+		"/Users/jkulton/jekyll/_site/css/main.css",
+		"/Users/jkulton/Desktop/Tifa’s Swingy Ass.swf",
+		"/Users/jkulton/Desktop/index.html",
+		"/FTP/frecklesbigday/frecklesbigday.com/wp-content/themes/index.php",
+		"/Users/jkulton/Desktop/style.css",
+		"/Users/jkulton/Desktop/outline.txt",
+		"/Users/jkulton/jekyll/_sass/_base.scss",
+		"/Users/jkulton/jekyll/_sass/_layout.scss",
+		"/Users/jkulton/jekyll/_layouts/home.html",
+		"/Users/jkulton/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/jkulton/jekyll/_layouts/default.html",
+		"/Users/jkulton/jekyll/_config.yml",
+		"/Users/jkulton/mysite/_config.yml",
+		"/Users/jkulton/GitHub/freeappideas.github.io/css/style.css",
+		"/Users/jkulton/Dropbox/Public/appideas/js/index.js",
+		"/Users/jkulton/GitHub/freeappideas.github.io/index.html",
+		"/Users/jkulton/Dropbox/Public/appideas/index.html",
+		"/Users/jkulton/Downloads/codepen_yNZLZx (1)/css/style.css",
+		"/Users/jkulton/Downloads/codepen_yNZLZx (2)/index.html",
+		"/Users/jkulton/Downloads/codepen_yNZLZx/js/index.js",
+		"/Users/jkulton/Desktop/cpe3_logo.svg",
+		"/usr/include/glob.h",
+		"/Volumes/CENTON USB/DBXL/EXAMPLES/C/SAMPLE.C",
+		"/Users/jkulton/Downloads/startbootstrap-freelancer-1.0.3/index.html",
+		"/Users/jkulton/Downloads/codepen_RNjZRa/index.html",
+		"/Users/jkulton/Desktop/anchor-cms-0.9.2/readme.md",
+		"/Users/jkulton/Desktop/codepen_raVNyE/index.html",
+		"/Users/jkulton/Desktop/script.js",
+		"/Users/jkulton/GitHub/jkulton.github.io/js/index.js",
+		"/Users/jkulton/Desktop/navigate_logo-324936594e90189a951999447353758b.svg",
+		"/Users/jkulton/Downloads/codepen_hkJxr/index.html",
+		"/private/var/folders/65/gkjdqjlx7tx44tgdv0pxkjzc0000gn/T/fz3temp-1/functions.php",
+		"/private/var/folders/65/gkjdqjlx7tx44tgdv0pxkjzc0000gn/T/fz3temp-1/footer.php",
+		"/private/var/folders/65/gkjdqjlx7tx44tgdv0pxkjzc0000gn/T/fz3temp-1/style 2.css",
+		"/private/var/folders/65/gkjdqjlx7tx44tgdv0pxkjzc0000gn/T/fz3temp-1/styles.css",
+		"/private/var/folders/65/gkjdqjlx7tx44tgdv0pxkjzc0000gn/T/fz3temp-1/style.css",
+		"/private/var/folders/65/gkjdqjlx7tx44tgdv0pxkjzc0000gn/T/fz3temp-1/.htaccess 2",
+		"/private/var/folders/65/gkjdqjlx7tx44tgdv0pxkjzc0000gn/T/fz3temp-1/.htaccess",
+		"/Users/jkulton/Desktop/anchor/themes/default/footer.php",
+		"/Users/jkulton/Desktop/anchor/themes/default/page.php",
+		"/Users/jkulton/Desktop/.htaccess",
+		"/Users/jkulton/Downloads/anchor-cms-0.9.2/readme.md",
+		"/Users/jkulton/Downloads/codepen_eIKBb (1)/css/style.css",
+		"/Users/jkulton/Downloads/codepen_eIKBb (1)/index.html",
+		"/Users/jkulton/Downloads/codepen_qjvgF (1)/css/style.css",
+		"/Users/jkulton/Downloads/codepen_qjvgF (1)/index.html",
+		"/Users/jkulton/Desktop/test.html",
+		"/Users/jkulton/Desktop/untitled folder/mystyle.css",
+		"/Users/jkulton/Desktop/untitled folder/you.html",
+		"/Users/jkulton/Downloads/wwhite (1).html"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"pure-blue",
+			"white",
+			"B80",
+			"visited"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 215.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
