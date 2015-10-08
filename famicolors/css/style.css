@@ -37,6 +37,7 @@ svg path {
 .header {
   background-color:#F83800;
   height:50vh;
+  min-height: 400px;
   color:white;
 }
 
