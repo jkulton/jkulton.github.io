@@ -12,43 +12,71 @@ body {
   padding:20px 50px;
 }
 
-.row {
+.swatch-col {
+  padding:0 25px;
+  margin-bottom:50px;
+}
+
+.swatch {
   background-color:#fff;
-  padding:20px;
-  box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24)
+  box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+}
+
+svg path {
+  fill:white;
+}
+
+.swatch-header {
+  height:80px;
 }
 
 .footer {
   margin-top:40px;
 }
 
+.header {
+  background-color:#F83800;
+  height:50vh;
+  color:white;
+}
+
+.header div {
+  padding:10px 0px;
+}
+
+.header, .footer {
+  font-family:'Montserrat';
+}
+
 /* Block Styling */
 
 .color-block {
   height:150px;
-  /*padding:10px;*/
+  margin-bottom:15px;
   transition:all 0.2s ease-in-out;
 }
 
-.color-block:hover {
-  transform: scale(1.05);
-  z-index:100000;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
 .color-label {
-  font-size:1.6em;
-  position:relative;
-  top:50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  font-family:'Montserrat';
+    display: none;
+    font-size: 1.6em;
+    position: relative;
+    top: 90%;
+    text-align: right;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    font-family: 'Montserrat';
+    opacity: 0.8;
 }
 
 .text-white {
   color:white;
 }
+
+.color-block:hover .color-label {
+  display: inherit;
+}
+
 
 /* Block Colors */
 
@@ -269,5 +297,25 @@ body {
 @media (max-width: 992px) {
   .wrap {
     padding:20px;
+  }
+}
+
+/* Creating fluid grid with CSS3 hax0r stuff */
+
+@media (min-width: 768px) {
+  .row-column-control {
+    -webkit-column-count: 2;
+  }
+
+  .swatch-col {
+    display: inline-block;
+    width: 100%;
+    float: none;
+  }
+}
+
+@media (min-width:992px) {
+  .row-column-control {
+    -webkit-column-count: 3;
   }
 }
