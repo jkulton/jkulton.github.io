@@ -30,6 +30,10 @@ svg path {
   height:80px;
 }
 
+.swatch-header h3 {
+  padding-top:18px;
+}
+
 .footer {
   margin-top:40px;
 }
