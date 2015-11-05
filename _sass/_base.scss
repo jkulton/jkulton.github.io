@@ -1,0 +1,458 @@
+/**
+ * Reset some basic elements
+ */
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/**
+ * Basic styling
+ */
+
+html {
+    min-width: 240px;
+}
+
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: 300;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+}
+
+.name {
+    margin:0;
+}
+
+@media (min-width:768px) {
+    .main {
+        padding:50px;
+    }
+}
+
+.main {
+    background-color:#fff;
+    padding:50px 15px;
+}
+
+.hero {
+    background-image:url('/hero.jpg');
+    height:350px;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    position:relative;
+    filter:grayscale(0.5);
+    -webkit-filter:grayscale(0.9);
+}
+
+.header-position {
+    position:absolute;
+    bottom:5%;
+    left:5%;
+    padding:15px;
+
+    h4, h1 {
+        margin:0;
+        color:white;
+    }
+
+}
+
+.button {
+    border:2px solid transparent;
+    font-size:0.95em;
+    padding:0.7rem;
+    text-transform: uppercase;
+    transition:all 0.3s ease-in;
+    font-family:'Montserrat';
+    display: inline-block;
+    margin-bottom:10px;
+}
+
+.button:hover {
+    text-decoration: none;
+    color:white;
+}
+
+.mont {
+    font-family: 'Montserrat';
+}
+
+.twitter {
+    color:#55acee;
+    //border-color:#55acee;
+}
+
+.twitter:hover {
+    background-color:#55acee;
+}
+
+.github {
+    color:#333;
+    //border-color:#333;
+}
+
+.github:hover {
+    background-color:#333;
+}
+
+.linkedin {
+    color:#0077b5;
+    //border-color:#0077b5;
+}
+
+.linkedin:hover {
+    background-color:#0077b5;
+}
+
+.email {
+    color:#db4437;
+    //border-color:#db4437;
+}
+
+.email:hover {
+    background-color:#db4437;
+}
+
+
+
+/*
+Post Styling
+*/
+
+.paper {
+    background-color:#fff;
+    box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+}
+
+.paper-sm {
+    padding:5px 10px;
+    display: inline-block;
+    margin-bottom:15px;
+}
+
+.paper-link {
+    color:white !important;
+    font-family:'Montserrat';
+    transition:all 0.2s ease-in;
+}
+
+.paper-link:hover {
+    text-decoration: none;
+}
+
+.post-list li {
+    width:100%;
+}
+
+.post-link {
+    width:100%;
+    border-bottom:2px solid transparent;
+    padding:20px;
+    height:100%;
+    width:100%;
+
+    h2 {
+        margin:0;
+    }
+}
+
+.post-link:hover {
+    background-color:rgba(0, 0, 0, 0.05);
+    border-bottom:2px solid gray;
+
+}
+
+ul  li {
+    display: inline-block;
+}
+
+ul.profile {
+    list-style: none;
+    text-align: center;
+}
+
+.ul-inline {
+    margin:0;
+}
+
+.sized-link {
+    display: inline-block;
+    width:100%;
+    height:100%;
+}
+
+.post {
+    max-width:960px;
+    margin:0 auto;
+    float:none;
+    padding:0;
+}
+
+.subtle-text {
+    color:#a0a0a0;
+}
+
+.project {
+    width:100%;
+    padding:20px;
+    color:#333;
+    font-family: 'Montserrat';
+    transition:all 0.2s ease-in;
+    border-bottom:2px solid transparent;
+    background-color:transparent;
+}
+
+.project:hover {
+    background-color:rgba(0,0,0,0.05);
+}
+
+.project p {
+    font-size:13px;
+    text-transform: uppercase;
+}
+
+.famicolors:hover {
+    border-bottom:2px solid red;
+
+}
+
+.cirro:hover {
+    /*background:radial-gradient(circle at top left, rgb(255, 229, 0) 10%, rgb(83, 191, 253) 26%, rgb(11, 46, 255) 100%);*/
+    border-bottom:2px solid #3F51B5;
+}
+
+.twitmoji:hover {
+    border-bottom:2px solid #FBD15E;
+}
+
+.dark-hr {
+    border-top:1px solid #a0a0a0;
+    margin:10px auto;
+    width:80%;
+}
+
+.post-content {
+
+    padding-bottom:50px;
+
+    p {
+        margin:25px 50px;
+        font-family:'Georgia';
+        font-size:22px;
+    }
+}
+
+.post-header {
+    padding:50px 50px 0px 50px;
+}
+
+.post-title {
+    font-family:'Open Sans';
+    font-weight:bold;
+    font-size:36px;
+}
+
+.container-fluid {
+    padding-left:75px;
+    padding-right:75px;
+    padding-top:50px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    //&:visited {
+    //    color: darken($brand-color, 15%);
+    //}
+
+    &:hover {
+        color: $brand-color;
+        text-decoration:none;
+    }
+}
+
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: scroll;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+}
+
+.container-fluid {
+    @include media-query($on-laptop){
+        padding:0;
+    }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}
