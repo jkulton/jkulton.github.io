@@ -456,14 +456,3 @@ pre {
         }
     }
 }
-
-@media (max-width:767px) {
-    .hero {
-        position:fixed;
-        width:100%;
-    }
-    .main {
-        z-index: 2;
-        margin-top:350px;
-    }
-}
