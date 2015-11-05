@@ -33,17 +33,6 @@ body {
     margin:0;
 }
 
-@media (max-width:767px) {
-    .hero {
-        position:fixed;
-        width:100%;
-    }
-    .main {
-        z-index: 2;
-        margin-top:350px;
-    }
-}
-
 @media (min-width:768px) {
     .main {
         padding:50px;
@@ -465,5 +454,16 @@ pre {
         path {
             fill: $grey-color;
         }
+    }
+}
+
+@media (max-width:767px) {
+    .hero {
+        position:fixed;
+        width:100%;
+    }
+    .main {
+        z-index: 2;
+        margin-top:350px;
     }
 }
