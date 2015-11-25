@@ -1,7 +1,7 @@
 window.onload = function night(){
   var d = new Date();
   
-  if (d.getHours() >= 20 || d.getHours() <= 8)
+  if (d.getHours() >= 21 || d.getHours() <= 6)
   {
     var body = document.getElementsByTagName('body')[0];
     console.log(body);
