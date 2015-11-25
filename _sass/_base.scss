@@ -43,13 +43,10 @@ body {
         border-bottom:4px solid $text-color;
         display: inline-block;
         padding-bottom:2px;
+        margin-top:1rem;
     }
-    h4 {
+    h4,h2 {
         margin-bottom:1rem;
-    }
-    h2 {
-        margin-bottom:0.5rem;
-
     }
 }
 
@@ -68,7 +65,7 @@ body {
 }
 
 .hero {
-    margin-bottom:2rem;
+    margin-bottom:10px;
 }
 
 .info {
@@ -137,6 +134,7 @@ ul.projects {
 
         a {
             text-transform:uppercase;
+            font-weight:bold;
         }
     }
 }
