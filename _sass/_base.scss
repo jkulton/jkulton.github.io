@@ -29,30 +29,46 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-.name {
-    margin:0;
+.main {
+    padding:15px;
+    max-width:45em;
+
+    h1,h2,h3,h4,h5 {
+        font-family:'Montserrat';
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    h4,h2 {
+        border-bottom:4px solid $text-color;
+        display: inline-block;
+        padding-bottom:2px;
+    }
+    h4 {
+        margin-bottom:1rem;
+    }
+    h2 {
+        margin-bottom:0.5rem;
+
+    }
 }
 
 @media (min-width:768px) {
     .main {
-        padding:50px;
+        padding:3rem;
+        margin:20px auto;
     }
 }
 
-.main {
-    background-color:#fff;
-    padding:15px;
+.name {
+    font-size:3rem;
+    font-family:'Montserrat';
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .hero {
-    background-image:url('/hero-web-min.jpg');
-    height:350px;
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
-    position:relative;
-    filter:grayscale(0.5);
-    -webkit-filter:grayscale(0.9);
+    margin-bottom:2rem;
 }
 
 .info {
@@ -88,46 +104,6 @@ body {
     color:white;
 }
 
-.mont {
-    font-family: 'Montserrat';
-}
-
-.twitter {
-    color:#55acee;
-    //border-color:#55acee;
-}
-
-.twitter:hover {
-    background-color:#55acee;
-}
-
-.github {
-    color:#333;
-    //border-color:#333;
-}
-
-.github:hover {
-    background-color:#333;
-}
-
-.linkedin {
-    color:#0077b5;
-    //border-color:#0077b5;
-}
-
-.linkedin:hover {
-    background-color:#0077b5;
-}
-
-.email {
-    color:#db4437;
-    //border-color:#db4437;
-}
-
-.email:hover {
-    background-color:#db4437;
-}
-
 
 
 /*
@@ -151,39 +127,18 @@ Post Styling
     transition:all 0.2s ease-in;
 }
 
-.paper-link:hover {
-    text-decoration: none;
-}
+ul.projects {
 
-.post-list li {
-    width:100%;
-}
+    margin:0;
 
-.post-link {
-    width:100%;
-    border-bottom:2px solid transparent;
-    padding:20px;
-    height:100%;
-    width:100%;
+    li {
+        list-style-type: none;
+        margin-bottom:10px;
 
-    h2 {
-        margin:0;
+        a {
+            text-transform:uppercase;
+        }
     }
-}
-
-.post-link:hover {
-    background-color:rgba(0, 0, 0, 0.05);
-    border-bottom:2px solid gray;
-
-}
-
-ul  li {
-    display: inline-block;
-}
-
-ul.profile {
-    list-style: none;
-    text-align: center;
 }
 
 .ul-inline {
@@ -201,43 +156,6 @@ ul.profile {
     margin:0 auto;
     float:none;
     padding:0;
-}
-
-.subtle-text {
-    color:#a0a0a0;
-}
-
-.project {
-    width:100%;
-    padding:20px;
-    color:#333;
-    font-family: 'Montserrat';
-    transition:all 0.2s ease-in;
-    border-bottom:2px solid transparent;
-    background-color:transparent;
-}
-
-.project:hover {
-    background-color:rgba(0,0,0,0.05);
-}
-
-.project p {
-    font-size:13px;
-    text-transform: uppercase;
-}
-
-.famicolors:hover {
-    border-bottom:2px solid red;
-
-}
-
-.cirro:hover {
-    /*background:radial-gradient(circle at top left, rgb(255, 229, 0) 10%, rgb(83, 191, 253) 26%, rgb(11, 46, 255) 100%);*/
-    border-bottom:2px solid #3F51B5;
-}
-
-.twitmoji:hover {
-    border-bottom:2px solid #FBD15E;
 }
 
 .dark-hr {
@@ -284,7 +202,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom:10px;
 }
 
 
@@ -351,6 +269,7 @@ a {
     &:hover {
         color: $brand-color;
         text-decoration:none;
+        border-bottom:2px dotted $brand-color;
     }
 }
 
@@ -458,5 +377,32 @@ pre {
         path {
             fill: $grey-color;
         }
+    }
+}
+
+#night {
+    color:white;
+    background-color:#222;
+
+    a {
+        color:#00CCFF;
+        &:hover{
+            color:#00CCFF;
+            border-bottom:2px solid #00CCFF;
+        }
+    }
+
+    .main {
+        background-color:#222;
+        color:white;
+    }
+
+    h4,h2 {
+        border-bottom:4px solid #fff;
+    }
+
+    .hero {
+        filter:grayscale(1);
+        -webkit-filter:grayscale(1);
     }
 }
