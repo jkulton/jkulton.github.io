@@ -34,7 +34,6 @@ body {
     max-width:45em;
 
     h1,h2,h3,h4,h5 {
-        font-family:'Montserrat';
         font-weight: bold;
         text-transform: uppercase;
     }
@@ -59,7 +58,6 @@ body {
 
 .name {
     font-size:3rem;
-    font-family:'Montserrat';
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -91,7 +89,6 @@ body {
     padding:0.7rem;
     text-transform: uppercase;
     transition:all 0.3s ease-in;
-    font-family:'Montserrat';
     display: inline-block;
     margin-bottom:10px;
 }
@@ -120,7 +117,6 @@ Post Styling
 
 .paper-link {
     color:white !important;
-    font-family:'Montserrat';
     transition:all 0.2s ease-in;
 }
 
@@ -135,7 +131,6 @@ ul.projects {
         a {
             text-transform:uppercase;
             font-weight:bold;
-            font-family:'Montserrat';
         }
     }
 }
