@@ -1,43 +1,40 @@
 ---
 layout: default
 ---
-    <div class="main">
-        <h2 class="name">Jon Kulton</h2>
-        <img src="/hero-new-min.jpg" class="hero">
-          <h4>About</h4>
-          <p>Hello! I am a Designer and Developer from Ohio. Currently, I'm finishing undergraduate study in MIS and building something cool at <a href="https://www.patriotsoftware.com/">Patriot Software</a>.</p>
+<div class="main">
+    <h2 class="name">Jon Kulton</h2>
+    <img src="/hero-new-min.jpg" class="hero">
+      <h4>About</h4>
+      <p>Hello! I am a Designer and Developer from Ohio. Currently, I'm finishing undergraduate study in MIS and building something cool at <a href="https://www.patriotsoftware.com/">Patriot Software</a>.</p>
 
-          <p>Some of my work and thoughts are on <a href="http://www.twitter.com/jkulton">Twitter</a>, <a href="http://www.github.com/jkulton">GitHub</a>, and <a href="http://codepen.io/jkulton/">CodePen</a>.
-          <p>Contact me at <a href="mailto:jonkulton@gmail.com">jonkulton@gmail.com</a></p>
+      <p>Some of my work and thoughts are on <a href="http://www.twitter.com/jkulton">Twitter</a>, <a href="http://www.github.com/jkulton">GitHub</a>, and <a href="http://codepen.io/jkulton/">CodePen</a>.
+      <p>Contact me at <a href="mailto:jonkulton@gmail.com">jonkulton@gmail.com</a></p>
 
-          <h4>Projects</h4>
-          
-          <ul class="projects">
-            <li><a href="http://jkulton.github.io/cirro">CIRRO</a> – Simple. Gradient. Weather</li>
-            <li><a href="https://github.com/jkulton/twitmoji">Twitmoji</a> – Emoji buttons on Twitter.</li>
-          </ul>
-      </div>
-      <script>
-      window.onload = function night(){
-  var d = new Date();
-  
-  if (d.getHours() >= 21 || d.getHours() <= 6)
-  {
+      <h4>Projects</h4>
+      
+      <ul class="projects">
+        <li><a href="http://jkulton.github.io/cirro">CIRRO</a> – Simple. Gradient. Weather.</li>
+        <li><a href="https://github.com/jkulton/twitmoji">Twitmoji</a> – Emoji buttons on Twitter.</li>
+      </ul>
+  </div>
+<script>
+  window.onload = function night(){
+    var d = new Date();
+    if (d.getHours() >= 21 || d.getHours() <= 6)
+    {
+      var body = document.getElementsByTagName('body')[0];
+      console.log(body);
+      body.id = "night";
+    }
+  };
+
+  function toggle(){
     var body = document.getElementsByTagName('body')[0];
-    console.log(body);
-    body.id = "night";
-  }
-};
-
-function toggle(){
-
-  var body = document.getElementsByTagName('body')[0];
-
-  if(body.id == "night"){
-    body.id = "";
-  }
-  else if(body.id == ""){
-    body.id = "night";
-  }
-
-};</script>
+    if(body.id == "night"){
+      body.id = "";
+    }
+    else if(body.id == ""){
+      body.id = "night";
+    }
+  };
+</script>
