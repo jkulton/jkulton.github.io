@@ -3,28 +3,58 @@ layout: default
 ---
 <div class="main">
 	<h2>100 UI</h2>
-	<p>A challenge to create 100 UI elements based on <a href="https://twitter.com/npaulflavius">@npaulflavius</a>' #dailyui challenge.</p>
+	<p>A personal challenge to create 100 user interface elements based on the #dailyui challenge by <a href="https://twitter.com/npaulflavius">@npaulflavius</a>.</p>
 
-	<div class="card">
+	<div class="ui">
 		<h3>001 - Login</h3>
-		<img src="001.png">
-		(<a href="">.sketch</a>)
-		(<a href="http://codepen.io/jkulton/pen/vLbzwX" target="_blank">CodePen</a>)
+		<div class="card">
+			<img src="001.png">
+			<p class="date">Feb 13, 2016</p>
+			<p><a href="https://dl.dropboxusercontent.com/u/2255645/100ui/001-login.sketch"><i class="fa fa-diamond"></i> .sketch</a>
+			<a href="http://codepen.io/jkulton/pen/vLbzwX" target="_blank"><i class="fa fa-codepen"></i> CodePen</a></p>
+		</div>
 	</div>
 
 	<style>
 	.card {
 		border-bottom:1px solid #ccc;
 		padding-bottom:1rem;
-	}
-	.card img {
-		padding:3rem;
+		padding:2rem 2rem 0 2rem;
 		box-shadow:0 1px 1px 0 rgba(0,0,0,0.15);
 		border-radius:4px;
 		background:white;
+		position:relative;
+	}
+	.card p {
+		text-align:right;
+		margin:1rem 0;
+	}
+
+	.card p a {
+		background-color:#eee;
+		color:#555;
+		border-radius: 2rem;
+		padding:.5rem 1rem;
 	}
 	html, body {
 		background:#eee;
+	}
+
+	svg {
+		height:2rem;
+		fill:#ddd;
+		stroke:#ddd;
+	}
+
+	.ui {
+		padding-bottom:2rem;
+		border-bottom:1px solid #ccc;
+	}
+	.date {
+		color:#ccc;
+		position:absolute;
+		left:2rem;
+		bottom:0;
 	}
 	</style>
 
