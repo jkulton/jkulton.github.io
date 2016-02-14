@@ -2,8 +2,10 @@
 layout: default
 ---
 <div class="main">
-	<h2>100 UI</h2>
-	<p>A personal challenge to create 100 user interface elements based on the #dailyui challenge by <a href="https://twitter.com/npaulflavius">@npaulflavius</a>.</p>
+	<a href="http://jkulton.com/" class="logo">jk</a> <h2 class="title">100 UI</h2>
+	<div class="sub-header">
+		<p>A personal challenge to create 100 user interface elements, based on the #dailyui challenge by <a href="https://twitter.com/npaulflavius">@npaulflavius</a>.</p>
+	</div>
 
 	<div class="ui">
 		<h3>001 - Login</h3>
@@ -13,6 +15,11 @@ layout: default
 			<p><a href="https://dl.dropboxusercontent.com/u/2255645/100ui/001-login.sketch"><i class="fa fa-diamond"></i> .sketch</a>
 			<a href="http://codepen.io/jkulton/pen/vLbzwX" target="_blank"><i class="fa fa-codepen"></i> CodePen</a></p>
 		</div>
+	</div>
+
+	<div class="twitter">
+		<p>Tweet me? Tweet me.</p>
+		<a href="http://twitter.com/jkulton"><i class="fa fa-twitter"></i> @jkulton</a>
 	</div>
 
 	<style>
@@ -47,7 +54,7 @@ layout: default
 	}
 
 	.ui {
-		padding-bottom:2rem;
+		padding: 2rem 0;
 		border-bottom:1px solid #ccc;
 	}
 	.date {
@@ -55,6 +62,35 @@ layout: default
 		position:absolute;
 		left:2rem;
 		bottom:0;
+	}
+
+	.twitter {
+		text-align:center;
+		margin:2rem 0;
+	}
+
+	.twitter p {
+		color:#ccc;
+	}
+
+	.twitter a {
+		color:#fff;
+		background:#55acee;
+		padding:.5rem 1rem;
+		border-radius:4px;
+	}
+
+	.twitter a:hover {
+		position:relative;
+		top:1px;
+		box-shadow:none;
+		border:0;
+	}
+	.sub-header {
+		border-bottom:1px solid #ccc;
+	}
+	.sub-header p {
+		padding:.5rem 0;
 	}
 	</style>
 
