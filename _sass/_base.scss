@@ -51,6 +51,7 @@ body {
 @media (min-width:768px) {
     .main {
         padding:3rem;
+        padding-top:0;
         margin:20px auto;
     }
 }
@@ -58,12 +59,12 @@ body {
 .name {
     font-size:3rem;
     font-weight: bold;
-    text-transform: uppercase;
     letter-spacing: 0.2rem;
 }
 
 .hero {
     margin-bottom:10px;
+    box-shadow:0 1px 1px 0 rgba(0,0,0,0.15);
 }
 
 .info {
