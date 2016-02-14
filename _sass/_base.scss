@@ -416,7 +416,7 @@ pre {
 .card {
         border-bottom:1px solid #ccc;
         padding-bottom:1rem;
-        padding:1.5rem 1.5rem 0 1.5rem;
+        padding:1rem 1rem 0 1rem;
         box-shadow:0 1px 1px 0 rgba(0,0,0,0.15);
         border-radius:4px;
         background:white;
@@ -424,7 +424,7 @@ pre {
     }
     .card p {
         text-align:right;
-        margin:1rem 0;
+        margin:.5rem 0;
     }
 
     .card p a {
@@ -455,6 +455,8 @@ pre {
         color:#ccc;
         position:absolute;
         bottom:0;
+        margin:.5rem 0;
+        font-size:.9rem;
     }
 
     .twitter {
