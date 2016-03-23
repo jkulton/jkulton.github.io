@@ -39,7 +39,8 @@ a {
 }
 
 p {
-    margin-bottom:1rem;
+    padding:.25rem 0 .25rem .5rem;
+    border-left: 3px solid #ebebeb;
 }
 
 img {
@@ -61,7 +62,7 @@ header {
 }
 
 header a {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color:$text-color;
     text-decoration: none;
 
@@ -75,7 +76,6 @@ header a {
 h2 {
     margin-top: 1.5rem;
     font-size: 1.75rem;
-    margin-bottom: .5rem;
 }
 
 .projects {
@@ -97,6 +97,9 @@ h2 {
     padding-top:.5rem;
     text-align: center;
     color: #ccc;
+    span {
+        display:block;
+    }
     a {
         background-color: #55acee;
         color:white;
@@ -115,7 +118,7 @@ h2 {
 // 100ui
 
 .ui {
-    margin-top: 2rem;;
+    margin-bottom: 1.5rem;
 }
 
 .card {
