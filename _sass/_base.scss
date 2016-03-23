@@ -39,31 +39,25 @@ a {
 }
 
 p {
-    margin-bottom: 1rem;
-}
-
-hr {
-    border: 0;
-    border-bottom: 1px dashed #ebebeb;
-    margin: 0;
-    width: calc(100% + 2rem);
-    margin-left: -1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom:1rem;
 }
 
 img {
     width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .wrapper, header {
+    max-width:35rem;
     margin:0 auto;
 }
 
 header {
-    max-width: 37rem;
+    max-width: 35rem;
     padding-bottom: 1rem;
     margin-top: 1rem;
+    border-bottom: 1px solid #eee;
 }
 
 header a {
@@ -78,14 +72,8 @@ header a {
     }
 }
 
-.wrapper {
-    background: #fff;
-    padding: 1rem;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25);
-    max-width: 35rem;
-}
-
 h2 {
+    margin-top: 1.5rem;
     margin-bottom: .5rem;
 }
 
@@ -102,16 +90,11 @@ h2 {
 }
 
 .twitter {
+    margin: 3rem 0 1rem 0;
     border-top:1px solid #ccc;
-    padding-top:1rem;
+    padding-top:.5rem;
     text-align: center;
     color: #ccc;
-    max-width: 37rem;
-    margin: 2rem auto 0 auto;
-    padding-bottom:2rem;
-    span {
-        display:block;
-    }
     a {
         background-color: #55acee;
         color:white;
@@ -127,12 +110,11 @@ h2 {
     }
 }
 
-.card-photo {
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
-    margin: 1rem 0;
-}
-
 // 100ui
+
+.ui {
+    margin-top: 2rem;;
+}
 
 .card {
 
