@@ -59,6 +59,15 @@ header {
     padding-bottom: 1rem;
     margin-top: 1rem;
     border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.page-title {
+    position: absolute;
+    color: #ccc;
+    right: 0;
+    font-size: 1.75rem;
+    top: .25rem;
 }
 
 header a {
@@ -93,7 +102,7 @@ h2 {
 
 .twitter {
     margin: 3rem 0 1rem 0;
-    border-top:1px solid #ccc;
+    border-top:1px solid #ebebeb;
     padding-top:.5rem;
     text-align: center;
     color: #ccc;
@@ -118,7 +127,7 @@ h2 {
 // 100ui
 
 .ui {
-    margin-bottom: 1.5rem;
+   margin: 1rem 0;
 }
 
 .card {
