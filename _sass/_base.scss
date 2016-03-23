@@ -63,16 +63,18 @@ img {
 header {
     max-width: 37rem;
     padding-bottom: 1rem;
-    margin-top: .5rem;
+    margin-top: 1rem;
 }
 
 header a {
     font-size: 1.5rem;
+    color:$text-color;
     text-decoration: none;
 
     &:hover {
+        color:$text-color;
         text-decoration: none;
-        border-bottom: 3px solid #2196F3;
+        border-bottom: 3px solid $text-color;
     }
 }
 
