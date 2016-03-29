@@ -56,8 +56,11 @@ img { width: 100%; }
 
 header {
     max-width: 35rem;;
-    padding-bottom: 1rem;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    padding-bottom: .75rem;
 }
 
 header.site-header:after {
