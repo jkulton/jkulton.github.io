@@ -72,6 +72,7 @@ header.site-header:after {
 
 .content > h2 {
     margin-top: 0;
+    font-size: 1.25rem;
 }
 
 header a {
@@ -127,6 +128,7 @@ h2 {
 
     .date {
         color: #ccc;
+        font-size: .9rem;
     }
 
     a {
@@ -152,23 +154,6 @@ h2 {
     border-bottom: 1px solid #ddd;
 }
 
-.content h2 {
-    margin-top:1.25rem;
-    margin-bottom: 0;
-    font-size: 1rem;
-    line-height: 1rem;
-    font-weight: $font-weight-normal;
-}
-
 .content a {
     font-size:1rem;
-}
-
-.content .content__title {
-    font-weight: normal;
-    margin-bottom: .75rem;
-    color: #bbb;
-    margin-top: 0;
-    font-size: .9rem;
-    text-transform: uppercase;
 }
