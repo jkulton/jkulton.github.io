@@ -1,5 +1,14 @@
-<header class="site-header">
-
-  <h1><a href="http://jkulton.com/">@jkulton</a></h1>
-
-</header>
+<section class="w100 fixed bg-blue">
+	<ul class="bold f-sm flex upper f100 mw35 mha pv05 ph1">
+		<li class="ib mr05">
+			<a class="nav-a current td-none logo" href="/">
+				<span class="ib">JK</span>
+				{% if page.url != "/index.html" %}
+   					<span class="ib">Home</span>
+				{% endif %}
+			</a>
+		</li>
+		<!--<li class="ib mr1 mla"><a class='td-none white' href="http://jkulton.com/projects">Projects</a></li>
+		<li class="ib"><a class="td-none white" href="http://jkulton.com/writing">Writing</a></li>-->
+	</ul>
+</section>
