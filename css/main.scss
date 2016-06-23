@@ -14,7 +14,7 @@ $font-weight-normal: 300;
 
 $primary:          #1565C0;
 $text-color:       #45444a;
-$background-color: #f9f9f9;
+$background-color: #f5f5f5;
 $brand-color:      #009bff;
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -45,7 +45,7 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-weight: 500;
+    font-weight: 400;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
