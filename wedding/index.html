@@ -132,33 +132,36 @@ title: "Wedding Info"
 
 <script>
 window.onload = function() {
+
+	// Select random photo for footer
 	selectedImage = Math.floor((Math.random() * 2) + 1);
 	document.querySelector(".hero").src = selectedImage + ".jpg";
 
-	theseMen = ["Noah Kulton","Nate Kulton","Aaron Allison","Brian Genshaw","Caleb Callahan","Micah Callahan","Ben Kulton","Daniel Fetherston","Tyler Kulton","Josiah Callahan"];
+	// Initial wedding party lists
+	groomsmen = ["Noah Kulton","Nate Kulton","Aaron Allison","Brian Genshaw","Caleb Callahan","Micah Callahan","Ben Kulton","Daniel Fetherston","Tyler Kulton","Josiah Callahan"];
+	bridesmaids = ["Mariah Kulton","Hope Fetherston","Sarah Roeser","Taylor Callahan","Stacey Callahan","Beverly Callahan","Faith Fetherston","Julia Fetherston","Kathleen Borrell","Deborah Roeser"];
 
-	theseLadies = ["Mariah Kulton","Hope Fetherston","Sarah Roeser","Taylor Callahan","Stacey Callahan","Beverly Callahan","Faith Fetherston","Julia Fetherston","Kathleen Borrell","Deborah Roeser"];
+	// Shuffle the arrays
+	shuffle(groomsmen);
+	shuffle(bridesmaids);
 
-	function shuffle (array) {
-	  var i = 0
-	    , j = 0
-	    , temp = null
-
-	  for (i = array.length - 1; i > 0; i -= 1) {
-	    j = Math.floor(Math.random() * (i + 1))
-	    temp = array[i]
-	    array[i] = array[j]
-	    array[j] = temp
-	  }
-	}
-
-	shuffle(theseMen);
-	shuffle(theseLadies);
-
+	// Update the page with the new lists
 	for(i = 0; i < 10; i++) {
 		temp = i + 1;
-		document.querySelector("." + "man-" + temp).innerHTML = theseMen[i];
-		document.querySelector("." + "lady-" + temp).innerHTML = theseLadies[i];
+		document.querySelector("." + "man-" + temp).innerHTML = groomsmen[i];
+		document.querySelector("." + "lady-" + temp).innerHTML = bridesmaids[i];
+	}
+
+	// Function shuffles input array
+    function shuffle (array) {
+	  var i = 0, j = 0, temp = null
+
+	  for (i = array.length - 1; i > 0; i -= 1) {
+	    j = Math.floor(Math.random() * (i + 1));
+	    temp = array[i];
+	    array[i] = array[j];
+	    array[j] = temp;
+	  }
 	}
 }
 
