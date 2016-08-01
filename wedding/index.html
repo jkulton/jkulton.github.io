@@ -58,18 +58,18 @@ title: "Wedding Info"
 
 	<ul class="list mt1 pl0">
 		<li><span class="dif w-5rem">5:00pm <span class="mla mr2">– </span></span> Hors d'oeuvre</li>
-		<li><span class="dif w-5rem">5:45pm <span class="mla mr2">– </span></span> Bridal Party Arrives</li>
+		<li><span class="dif w-5rem">5:45pm <span class="mla mr2">– </span></span> Bridal party arrives</li>
 		<li><span class="dif w-5rem">5:55pm <span class="mla mr2">– </span></span> Bridal party begins food line</li>
 		<li><span class="dif w-5rem">6:00pm <span class="mla mr2">– </span></span> Tables dismissed for food</li>
 		<li><span class="dif w-5rem">6:30pm <span class="mla mr2">– </span></span> Speeches</li>
-		<li><span class="dif w-5rem">6:50pm <span class="mla mr2">– </span></span> First Dance</li>
-		<li><span class="dif w-5rem">6:55pm <span class="mla mr2">– </span></span> Father-Daughter Dance</li>
-		<li><span class="dif w-5rem">7:00pm <span class="mla mr2">– </span></span> Longest Married Couple Dance</li>
-		<li><span class="dif w-5rem">7:05pm <span class="mla mr2">– </span></span> Open dance floor</li>
-		<li><span class="dif w-5rem">7:30pm <span class="mla mr2">– </span></span> Cut the cake</li>
-		<li><span class="dif w-5rem">7:30pm <span class="mla mr2">– </span></span> Greet guests</li>
-		<li><span class="dif w-5rem">7:50pm <span class="mla mr2">– </span></span> Guests move outside for sendoff</li>
-		<li><span class="dif w-5rem">8:00pm <span class="mla mr2">– </span></span> <img class="mr1 emoji" src="tada.png" />Sparkler send off!</li>
+		<li><span class="dif w-5rem">7:10pm <span class="mla mr2">– </span></span> First Dance</li>
+		<li><span class="dif w-5rem">7:15pm <span class="mla mr2">– </span></span> Father-Daughter Dance</li>
+		<li><span class="dif w-5rem">7:20pm <span class="mla mr2">– </span></span> Longest Married Couple Dance</li>
+		<li><span class="dif w-5rem">7:25pm <span class="mla mr2">– </span></span> Open dance floor</li>
+		<li><span class="dif w-5rem">7:45pm <span class="mla mr2">– </span></span> Cut the cake</li>
+		<li><span class="dif w-5rem">7:50pm <span class="mla mr2">– </span></span> Greet guests</li>
+		<li><span class="dif w-5rem">8:10pm <span class="mla mr2">– </span></span> Guests move outside for sendoff</li>
+		<li><span class="dif w-5rem">8:20pm <span class="mla mr2">– </span></span> <img class="mr1 emoji" src="tada.png" />Sparkler send off!</li>
 	</ul>
 
 	<section class="mb2 mt4 w-100 ttu tracked f6 bold dif items-center">
@@ -88,6 +88,49 @@ title: "Wedding Info"
 	<a href="https://goo.gl/maps/FTC8jWacuD92">2345 4th St.</a><br/>
 	<a href="https://goo.gl/maps/FTC8jWacuD92">Cuyahoga Falls, OH 44221</a>
 
+	<section class="mb2 mt4 w-100 ttu tracked f6 bold dif items-center">
+		<span class="dib mb1 line bb b--dark-gray"></span>
+		<span class="line-title tc mh3">Wedding Party</span>
+		<span class="dib mb1 line bb b--dark-gray"></span>
+	</section>
+
+	<section class="w-100" style="display:inline-flex;flex-wrap:wrap;">
+		<section style="flex: 1 50%;text-align:center;" class="br b--light-gray">
+			<h4 class="mb2 mt2">Groomsmen</h4>
+			<span class="block">Noah Kulton</span>
+			<span class="block">Nate Kulton</span>
+			<span class="block">Aaron Allison</span>
+			<span class="block">Brian Genshaw</span>
+			<span class="block">Caleb Callahan</span>
+			<span class="block">Micah Callahan</span>
+			<span class="block">Ben Kulton</span>
+			<span class="block">Daniel Fetherston</span>
+			<span class="block">Tyler Kulton</span>
+			<span class="block">Josiah Callahan </span>
+		</section>
+		<section style="flex:1 50%;text-align:center;">
+			<h4 class="mb2 mt2">Bridesmaids</h4>
+			<span class="block">Mariah Kulton</span>
+			<span class="block">Hope Fetherston</span>
+			<span class="block">Sarah Roeser</span>
+			<span class="block">Taylor Callahan</span>
+			<span class="block">Stacey Callahan</span>
+			<span class="block">Beverly Callahan</span>
+			<span class="block">Faith Fetherston</span>
+			<span class="block">Julia Fetherston</span>
+			<span class="block">Kathleen Borrell</span>
+			<span class="block">Deborah Roeser</span>
+		</section>
+	</section>
+
 </section>
 
-<img class="hero mt4 mw6 center db-ns" src="hero-min.jpg" />
+<img class="hero mw6 center db-ns mt2" src="2.jpg" />
+
+<script>
+window.onload = function() {
+	selectedImage = Math.floor((Math.random() * 2) + 1);
+	console.log(selectedImage);
+	document.querySelector(".hero").src = selectedImage + ".jpg";
+}
+</script>
