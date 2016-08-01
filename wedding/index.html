@@ -109,12 +109,12 @@ title: "Wedding Info"
 			<span class="db man-7">Ben Kulton</span>
 			<span class="db man-8">Daniel Fetherston</span>
 			<span class="db man-9">Tyler Kulton</span>
-			<span class="db man-10">Josiah Callahan </span>
+			<span class="db man-10">Josiah Callahan</span>
 		</section>
 		<section style="flex:1 50%;text-align:center;">
 			<h4 class="mb2 mt2">Bridesmaids</h4>
-			<span class="db lady-2">Hope Fetherston</span>
-			<span class="db lady-1">Mariah Kulton</span>
+			<span class="db lady-1">Hope Fetherston</span>
+			<span class="db lady-2">Mariah Kulton</span>
 			<span class="db lady-3">Sarah Roeser</span>
 			<span class="db lady-4">Taylor Callahan</span>
 			<span class="db lady-5">Stacey Callahan</span>
@@ -137,22 +137,20 @@ window.onload = function() {
 	selectedImage = Math.floor((Math.random() * 2) + 1);
 	document.querySelector(".hero").src = selectedImage + ".jpg";
 
-	// Initial wedding party lists
-	groomsmen = ["Noah Kulton","Nate Kulton","Aaron Allison","Brian Genshaw","Caleb Callahan","Micah Callahan","Ben Kulton","Daniel Fetherston","Tyler Kulton","Josiah Callahan"];
-	bridesmaids = ["Mariah Kulton","Hope Fetherston","Sarah Roeser","Taylor Callahan","Stacey Callahan","Beverly Callahan","Faith Fetherston","Julia Fetherston","Kathleen Borrell","Deborah Roeser"];
+	// Bridal party pairs
+	pairs = [["Noah Kulton","Hope Fetherston"],["Nate Kulton","Mariah Kulton"],["Aaron Allison","Sarah Roeser"],["Brian Genshaw","Taylor Callahan"],["Caleb Callahan","Stacey Callahan"],["Micah Callahan","Beverly Callahan"],["Ben Kulton","Faith Fetherston"],["Daniel Fetherston","Julia Fetherston"],["Tyler Kulton","Kathleen Borrell"],["Josiah Callahan","Deborah Roeser"]];
+	
+	// Shuffle the pairs
+	shuffle(pairs);
 
-	// Shuffle the arrays
-	shuffle(groomsmen);
-	shuffle(bridesmaids);
-
-	// Update the page with the new lists
+	// Update the page with the shuffled list
 	for(i = 0; i < 10; i++) {
 		temp = i + 1;
-		document.querySelector("." + "man-" + temp).innerHTML = groomsmen[i];
-		document.querySelector("." + "lady-" + temp).innerHTML = bridesmaids[i];
+		document.querySelector("." + "man-" + temp).innerHTML = pairs[i][0];
+		document.querySelector("." + "lady-" + temp).innerHTML = pairs[i][1];
 	}
 
-	// Function shuffles input array
+	// Function shuffles array
     function shuffle (array) {
 	  var i = 0, j = 0, temp = null
 
