@@ -15,6 +15,9 @@ title: "Wedding Info"
 	@media screen and (max-width:600px){.wedding{padding:1rem;}.line-title{flex:1.5;}}
 </style>
 
+<script>
+</script>
+
 <section class="mw6 mt4 center wedding">
 
 	<img class="icon" src="icon.png" />
@@ -23,7 +26,7 @@ title: "Wedding Info"
 
 	<section class="mb2 mt4 w-100 ttu tracked f6 bold dif items-center">
 		<span class="line dib mb1 bb b--dark-gray"></span>
-		<span class="line-title tc mh3">Rehearsal</span>
+		<span class="line-title tc mh3">Rehearsal (Friday)</span>
 		<span class="dib mb1 line bb b--dark-gray"></span>
 	</section>
 
@@ -34,13 +37,13 @@ title: "Wedding Info"
 
 	<section class="mb2 mt4 w-100 ttu tracked f6 bold dif items-center">
 		<span class="line dib mb1 bb b--dark-gray"></span>
-		<span class="line-title tc mh3">Wedding</span>
+		<span class="line-title tc mh3">Wedding (Saturday)</span>
 		<span class="dib mb1 line bb b--dark-gray"></span>
 	</section>
 
 	<ul class="list mt1 pl0">
 		<li><span class="dif w-5rem">10:00am <span class="mla mr2">– </span></span> Ladies arrive at church to get ready</li>
-		<li><span class="dif w-5rem">11:30pm <span class="mla mr2">– </span></span> Men arrive at church to get ready</li>
+		<li><span class="dif w-5rem">11:30am <span class="mla mr2">– </span></span> Men arrive at church to get ready</li>
 		<li><span class="dif w-5rem">1:15pm <span class="mla mr2">– </span></span>  Pictures with Groom and groomsmen</li>
 		<li><span class="dif w-5rem">1:30pm <span class="mla mr2">– </span></span>  Pictures with Bride and bridesmaid</li>
 		<li><span class="dif w-5rem">2:00pm <span class="mla mr2">– </span></span>  Immediate family pictures with Bride</li>
@@ -94,32 +97,32 @@ title: "Wedding Info"
 		<span class="dib mb1 line bb b--dark-gray"></span>
 	</section>
 
-	<section class="w-100" style="display:inline-flex;flex-wrap:wrap;">
+	<section class="mt1 w-100" style="display:inline-flex;flex-wrap:wrap;">
 		<section style="flex: 1 50%;text-align:center;" class="br b--light-gray">
 			<h4 class="mb2 mt2">Groomsmen</h4>
-			<span class="db">Noah Kulton</span>
-			<span class="db">Nate Kulton</span>
-			<span class="db">Aaron Allison</span>
-			<span class="db">Brian Genshaw</span>
-			<span class="db">Caleb Callahan</span>
-			<span class="db">Micah Callahan</span>
-			<span class="db">Ben Kulton</span>
-			<span class="db">Daniel Fetherston</span>
-			<span class="db">Tyler Kulton</span>
-			<span class="db">Josiah Callahan </span>
+			<span class="db man-1">Noah Kulton</span>
+			<span class="db man-2">Nate Kulton</span>
+			<span class="db man-3">Aaron Allison</span>
+			<span class="db man-4">Brian Genshaw</span>
+			<span class="db man-5">Caleb Callahan</span>
+			<span class="db man-6">Micah Callahan</span>
+			<span class="db man-7">Ben Kulton</span>
+			<span class="db man-8">Daniel Fetherston</span>
+			<span class="db man-9">Tyler Kulton</span>
+			<span class="db man-10">Josiah Callahan </span>
 		</section>
 		<section style="flex:1 50%;text-align:center;">
 			<h4 class="mb2 mt2">Bridesmaids</h4>
-			<span class="db">Mariah Kulton</span>
-			<span class="db">Hope Fetherston</span>
-			<span class="db">Sarah Roeser</span>
-			<span class="db">Taylor Callahan</span>
-			<span class="db">Stacey Callahan</span>
-			<span class="db">Beverly Callahan</span>
-			<span class="db">Faith Fetherston</span>
-			<span class="db">Julia Fetherston</span>
-			<span class="db">Kathleen Borrell</span>
-			<span class="db">Deborah Roeser</span>
+			<span class="db lady-1">Mariah Kulton</span>
+			<span class="db lady-2">Hope Fetherston</span>
+			<span class="db lady-3">Sarah Roeser</span>
+			<span class="db lady-4">Taylor Callahan</span>
+			<span class="db lady-5">Stacey Callahan</span>
+			<span class="db lady-6">Beverly Callahan</span>
+			<span class="db lady-7">Faith Fetherston</span>
+			<span class="db lady-8">Julia Fetherston</span>
+			<span class="db lady-9">Kathleen Borrell</span>
+			<span class="db lady-10">Deborah Roeser</span>
 		</section>
 	</section>
 
@@ -130,7 +133,34 @@ title: "Wedding Info"
 <script>
 window.onload = function() {
 	selectedImage = Math.floor((Math.random() * 2) + 1);
-	console.log(selectedImage);
 	document.querySelector(".hero").src = selectedImage + ".jpg";
+
+	theseMen = ["Noah Kulton","Nate Kulton","Aaron Allison","Brian Genshaw","Caleb Callahan","Micah Callahan","Ben Kulton","Daniel Fetherston","Tyler Kulton","Josiah Callahan"];
+
+	theseLadies = ["Mariah Kulton","Hope Fetherston","Sarah Roeser","Taylor Callahan","Stacey Callahan","Beverly Callahan","Faith Fetherston","Julia Fetherston","Kathleen Borrell","Deborah Roeser"];
+
+	function shuffle (array) {
+	  var i = 0
+	    , j = 0
+	    , temp = null
+
+	  for (i = array.length - 1; i > 0; i -= 1) {
+	    j = Math.floor(Math.random() * (i + 1))
+	    temp = array[i]
+	    array[i] = array[j]
+	    array[j] = temp
+	  }
+	}
+
+	shuffle(theseMen);
+	shuffle(theseLadies);
+
+	for(i = 0; i < 10; i++) {
+		temp = i + 1;
+		document.querySelector("." + "man-" + temp).innerHTML = theseMen[i];
+		document.querySelector("." + "lady-" + temp).innerHTML = theseLadies[i];
+	}
 }
+
+
 </script>
