@@ -1,17 +1,17 @@
 ---
 layout: default
 ---
-{% include header.html %}
 
-<section class="wrapper mha mw35 p1 pt4">
+<section class="f5 lh-copy pa4 mw6">
   <section class="content">
 
-    <h1>{{ page.title }}</h1>
-    <span class="mb05 ib f-sm f-gray">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
+    <h2 class="mt0 mb0">{{ page.title }}</h2>
 
-    <article class="card bg-white br2 mb1 p1 bc-gray b1">
+    <article>
     	{{ content }}
     </article>
+
+    <span class="mb1 db f5 italic silver w-100">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
 
   </section>
 </section>

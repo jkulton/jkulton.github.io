@@ -3,21 +3,6 @@ layout: default
 title: "Wedding Info"
 ---
 
-<style>
-	body { color: #333; }
-	a {
-		font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
-		color:#009688;
-		text-decoration: none;
-		border-bottom: 1px dotted #009688; 
-	}
-	.hero { margin-bottom:-.5rem; }.emoji{height:1rem;margin-bottom:-.2rem; }.line,.line-title{flex:1;}.icon{width:5rem;}
-	@media screen and (max-width:600px){.wedding{padding:1rem;}.line-title{flex:1.5;}}
-</style>
-
-<script>
-</script>
-
 <section class="mw6 mt4 center wedding">
 
 	<img class="icon" src="icon.png" />
@@ -131,7 +116,7 @@ title: "Wedding Info"
 <img class="hero mw6 center db-ns mt2" src="2.jpg" />
 
 <script>
-window.onload = function() {
+	window.onload = function() {
 
 	// Select random photo for footer
 	selectedImage = Math.floor((Math.random() * 2) + 1);
@@ -151,17 +136,27 @@ window.onload = function() {
 	}
 
 	// Function shuffles array
-    function shuffle (array) {
-	  var i = 0, j = 0, temp = null
+	function shuffle (array) {
+		var i = 0, j = 0, temp = null;
 
-	  for (i = array.length - 1; i > 0; i -= 1) {
-	    j = Math.floor(Math.random() * (i + 1));
-	    temp = array[i];
-	    array[i] = array[j];
-	    array[j] = temp;
-	  }
+		for (i = array.length - 1; i > 0; i -= 1) {
+			j = Math.floor(Math.random() * (i + 1));
+			temp = array[i];
+			array[i] = array[j];
+			array[j] = temp;
+		}
 	}
 }
-
-
 </script>
+
+<style>
+	body { color: #333; }
+	a {
+		font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+		color:#009688;
+		text-decoration: none;
+		border-bottom: 1px dotted #009688; 
+	}
+	.hero { margin-bottom:-.5rem; }.emoji{height:1rem;margin-bottom:-.2rem; }.line,.line-title{flex:1;}.icon{width:5rem;}
+	@media screen and (max-width:600px){.wedding{padding:1rem;}.line-title{flex:1.5;}}
+</style>
