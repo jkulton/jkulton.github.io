@@ -1,17 +1,25 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<section class="f5 lh-copy pa4 mw6">
-  <section class="content">
+  {% include head.html %}
 
-    <h2 class="mt0 mb0">{{ page.title }}</h2>
+  <body onscroll="prog()" onresize="prog()">
+	<section class="f5 lh-copy pa4 mw6">
+	  <section class="content">
 
-    <article>
-    	{{ content }}
-    </article>
+	    <h2 class="mt0 mb0">{{ page.title }}</h2>
 
-    <span class="mb1 db f5 italic silver w-100">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
+	    <article>
+	    	{{ content }}
+	    </article>
 
-  </section>
-</section>
+	    <span class="mb1 db f5 italic silver w-100">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
+
+	  </section>
+	</section>
+  </body>
+
+  <script src="{{ "/js/prog.js" | prepend: site.baseurl }}"></script>
+
+
+</html>
