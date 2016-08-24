@@ -1,0 +1,27 @@
+<html ng-app="styleList">
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+		<link rel="stylesheet" href="https://npmcdn.com/tachyons@4.1.0/css/tachyons.min.css"/>
+		<style>
+		.mla  { margin-left: auto; }
+		.mw-75 { max-width: 75%; }
+		.bs-1 { box-shadow: 0 1px 1px 0 rgba(0,0,0,0.15); }
+		</style>
+	</head>
+	<body ng-controller="ListController" class="mw7 center pa3 bg-light-gray">
+		<ul class="list pl0">
+			<li>
+				<input type="text" class="mb3 gray br2 pa2 w-100 ba b--light-silver" ng-model="search" placeholder="Search Styles" />
+			</li>
+			<li class="bs-1 bg-white mb3 pa3 flex items-center" ng-repeat="style in styles | filter: search">
+				<span><strong>{{ style[0] }}</strong></span>
+				<span class="mla mw-75">{{ style[1] }}</span>
+			</li>
+		</ul>
+		<section class="f6 w-100 moon-gray tc">
+			Made with <a class="moon-gray" href="http://tachyons.io/">Tachyons</a>
+		</section>
+		<script src="app.js"></script>
+	</body>
+</html>
