@@ -53,3 +53,8 @@ _site/hero.jpg
 _site/jekyll/update/2015/10/22/welcome-to-jekyll.html
 
 extra.html
+
+gulpfile.js
+
+node_modules/*
+package.json
