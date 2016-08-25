@@ -36,19 +36,9 @@
 ehthumbs.db
 Thumbs.db
 
-_site/*
+
 .jekyll-metadata
 .sass-cache
-
-_site/index.html
-
-_site/hero.jpg
-
-_site/feed.xml
-
-_site/css/main.css
-
-_site/hero.jpg
 
 _site/jekyll/update/2015/10/22/welcome-to-jekyll.html
 

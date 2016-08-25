@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jon Kulton</title>
+    <description>Jon Kulton: Designer
+</description>
+    <link>http://jkulton.github.io/</link>
+    <atom:link href="http://jkulton.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 24 Aug 2016 21:58:53 -0400</pubDate>
+    <lastBuildDate>Wed, 24 Aug 2016 21:58:53 -0400</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>The Whale</title>
+        <description>&lt;p&gt;Thank ye, man. Thy coffin lies handy to the vault.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“Sir? The hatchway? oh! So it does, sir, so it does.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;art-not-thou-the-leg-maker-look-did-not-this-stump-come-from-thy-shop&quot;&gt;Art not thou the leg-maker? Look, did not this stump come from thy shop?&lt;/h3&gt;
+
+&lt;p&gt;“I believe it did, sir; does the ferrule stand, sir?”
+“Well enough. But art thou not also the undertaker?”&lt;/p&gt;
+
+&lt;p&gt;“Aye, sir; I patched up this thing here as a coffin for Queequeg; but they’ve set me now to turning it into something else.”&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Then tell me; art thou not an arrant, all-grasping, intermeddling, monopolising, heathenish old scamp, to be one day making legs, and the next day coffins to clap them in, and yet again life-buoys out of those same coffins? Thou art as unprincipled as the gods, and as much of a jack-of-all-trades.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;“But I do not mean anything, sir. I do as I do.”&lt;/p&gt;
+
+&lt;p&gt;“The gods again. Hark ye, dost thou not ever sing working about a coffin? The Titans, they say, hummed snatches when chipping out the craters for volcanoes; and the grave-digger in the play sings, spade in hand. Dost thou never?”
+“Sing, sir? Do I sing? Oh, I’m indifferent enough, sir, for that; but the reason why the grave-digger made music must have been because there was none in his spade, sir. But the caulking mallet is full of it. Hark to it.”&lt;/p&gt;
+</description>
+        <pubDate>Wed, 15 Jun 2016 19:00:00 -0400</pubDate>
+        <link>http://jkulton.github.io/jekyll/update/2016/06/15/the-whale.html</link>
+        <guid isPermaLink="true">http://jkulton.github.io/jekyll/update/2016/06/15/the-whale.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Negative Space</title>
+        <description>&lt;p&gt;Pellentesque sed dui pharetra, rutrum mauris a, molestie arcu. Sed tempus justo sem, id imperdiet quam feugiat at. Praesent at nisl tincidunt, mattis nisl sed, commodo dolor. Duis euismod justo ut elit dapibus tincidunt. Praesent non lacus sem. Morbi ultrices ipsum at risus venenatis feugiat. Sed congue tristique massa et auctor. Nulla finibus, erat sed aliquet eleifend, justo nibh fringilla turpis, at molestie dolor velit vel justo. Aenean eleifend rhoncus lorem, eget fringilla metus porttitor et. Ut sollicitudin, lacus eget malesuada faucibus, libero purus consectetur nunc, in condimentum arcu urna at tortor. In ut dictum sapien, at dapibus ante. Sed et magna turpis. Aenean varius gravida metus ut bibendum. Vivamus sed elit ut libero auctor consequat eu eu eros. Phasellus nec lacinia ipsum.&lt;/p&gt;
+
+&lt;p&gt;Pellentesque sed dui pharetra, rutrum mauris a, molestie arcu. Sed tempus justo sem, id imperdiet quam feugiat at. Praesent at nisl tincidunt, mattis nisl sed, commodo dolor. Duis euismod justo ut elit dapibus tincidunt. Praesent non lacus sem. Morbi ultrices ipsum at risus venenatis feugiat. Sed congue tristique massa et auctor. Nulla finibus, erat sed aliquet eleifend, justo nibh fringilla turpis, at molestie dolor velit vel justo. Aenean eleifend rhoncus lorem, eget fringilla metus porttitor et. Ut sollicitudin, lacus eget malesuada faucibus, libero purus consectetur nunc, in condimentum arcu urna at tortor. In ut dictum sapien, at dapibus ante. Sed et magna turpis. Aenean varius gravida metus ut bibendum. Vivamus sed elit ut libero auctor consequat eu eu eros. Phasellus nec lacinia ipsum.&lt;/p&gt;
+
+&lt;div&gt;&lt;img src=&quot;http://i.imgur.com/oJBHfmw.jpg&quot; /&gt;&lt;/div&gt;
+
+&lt;p&gt;Pellentesque sed dui pharetra, rutrum mauris a, molestie arcu. Sed tempus justo sem, id imperdiet quam feugiat at. Praesent at nisl tincidunt, mattis nisl sed, commodo dolor. Duis euismod justo ut elit dapibus tincidunt. Praesent non lacus sem. Morbi ultrices ipsum at risus venenatis feugiat. Sed congue tristique massa et auctor. Nulla finibus, erat sed aliquet eleifend, justo nibh fringilla turpis, at molestie dolor velit vel justo. Aenean eleifend rhoncus lorem, eget fringilla metus porttitor et. Ut sollicitudin, lacus eget malesuada faucibus, libero purus consectetur nunc, in condimentum arcu urna at tortor. In ut dictum sapien, at dapibus ante. Sed et magna turpis. Aenean varius gravida metus ut bibendum. Vivamus sed elit ut libero auctor consequat eu eu eros. Phasellus nec lacinia ipsum.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 22 Oct 2015 10:37:12 -0400</pubDate>
+        <link>http://jkulton.github.io/jekyll/update/2015/10/22/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://jkulton.github.io/jekyll/update/2015/10/22/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>
