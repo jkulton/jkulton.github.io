@@ -39,6 +39,7 @@ Thumbs.db
 
 .jekyll-metadata
 .sass-cache
+node_modules
 
 _site/
 
