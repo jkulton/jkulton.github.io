@@ -11,17 +11,20 @@
 		</style>
 	</head>
 	<body ng-controller="ListController" class="mw7 center pa3 bg-light-gray">
-		<h3>Tachyons Dictionary</h3>
-		<ul class="list pl0">
+		<h2 class="ttu tc tracked mt3">CSS Lexicon</h2>
+		<ul ng-if="styleArray.length" class="list pl0">
 			<li>
 				<input type="text" class="mb3 gray br2 pa2 w-100 ba b--light-silver" ng-model="search" placeholder="Search Styles" />
 			</li>
-			<li class="mb3 flex" ng-repeat="style in styles | filter: search">
-				<span><strong>{{ style[0] }}</strong></span>
-				<span class="mla mw-75">{{ style[1] }}</span>
+			<li class="mb3 flex f6" style="font-family: monospace;" ng-repeat="style in styleArray | filter: search track by $index ">
+				{{ style }}
 			</li>
 		</ul>
-		<section class="f6 w-100 moon-gray tc">
+		<textarea placeholder="Paste functional CSS here and parse to create a searchable list." ng-model="userStyles" class="styleInput mw-100 pa2 w-100 h4 ba b--light-silver br2 mb3"></textarea>
+		<section ng-if="!styleArray.length" class="w-100 tc">
+			<a ng-click="showMe()" style="box-sizing:border-box;" class="w-100 w-50-ns f6 link dim br2 ph3 pv2 mb2 dib white bg-dark-gray" href="#0">Parse</a>
+		</section>
+		<section class="f6 w-100 moon-gray tc mt3">
 			Made with <a class="moon-gray" href="http://tachyons.io/">Tachyons</a>
 		</section>
 		<script src="app.js"></script>
