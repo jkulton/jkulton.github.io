@@ -3,7 +3,7 @@ var app = angular.module('styleList', []);
 app.controller('ListController', function($scope) {
     $scope.userStyles = "";
     $scope.styleArray = [];
-    $scope.showMe = function() {
+    $scope.createLexicon = function() {
         $scope.styleArray = $scope.userStyles.replace(/\s/g, '').replace(/@media.*}}/, '').split('}');
 
 		for (var i = 0; i < $scope.styleArray.length - 1; i++) {
