@@ -10,7 +10,7 @@
 		<h1 class="ttu tc tracked mt2 mt4-ns flex-ns items-center-ns justify-center-ns">Lexicon<span class="moon-gray ml2-ns f6 italic db dib-ns">beta</span></h1>
 		<ul ng-if="styleArray.length" class="list pl0">
 			<li class="relative">
-				<input type="text" class="mw-100 pa3 w-100 bn gray bn bs-1 br2 mb3" ng-model="search" placeholder="Search styles" />
+				<input type="text" class="mw-100 pa3 w-100 bn gray bn bs-1 br2 mb3 wan" ng-model="search" placeholder="Search styles" />
 				<span class="absolute top-1 right-1 moon-gray usn">{{ filteredList.length }}</span>
 			</li>
 			<li class="mb3 pb3 flex items-center bb b--moon-gray" ng-repeat="style in styleArray | filter: search as filteredList track by $index ">
