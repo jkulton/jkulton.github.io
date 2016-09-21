@@ -14,7 +14,7 @@ progress { vertical-align: baseline; }
 
 [hidden], template { display: none; }
 
-a { background-color: transparent; -webkit-text-decoration-skip: objects; }
+a { background-color: transparent; -webkit-text-decoration-skip: objects; color: blue; text-decoration: underline; }
 
 a:active, a:hover { outline-width: 0; }
 
