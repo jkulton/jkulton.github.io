@@ -1,12 +1,15 @@
 var app = angular.module('styleList', []);
 
 app.controller('ListController', function($scope) {
-
     $scope.userStyles = "";
     $scope.styleArray = [];
-
     $scope.showMe = function() {
         $scope.styleArray = $scope.userStyles.replace(/\s/g, '').split('}');
-        document.querySelector(".styleInput").style.display = "none";
+		for (var i = 0; i < $scope.styleArray.length - 1; i++) {
+			$scope.styleArray[i] = $scope.styleArray[i].split("{");
+			$scope.styleArray[i][0] = $scope.styleArray[i][0].replace(/,/g, "\n");
+			$scope.styleArray[i][1] = $scope.styleArray[i][1].replace(/;/g, "\n").replace(/:/g, ": ");
+		}
+		$scope.styleArray.pop();
     }
 });
