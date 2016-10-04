@@ -85,7 +85,7 @@ layout: default
 		<p>Paste the minified code below on any HTML page to enable a scroll indicator.</p>
 
 		<pre class="mb0 br2 w-100 overflow-auto pa3 nowrap code bg-dark-gray white">
-function tapeline(){wh=Math.max(b.scrollHeight,b.offsetHeight,de.clientHeight,de.scrollHeight,de.offsetHeight),ph=b.offsetHeight,el=d.querySelector("#tapeline"),ih=window.innerHeight,buffer=100,null===el?(tl=d.createElement("section"),tls=tl.style,tls.position="fixed",tls.top="0",tls.left="0",tls.background="#000",tls.height="5px",tl.id="tapeline",b.appendChild(tl)):wh-ih>buffer?(pos=window.pageYOffset/(wh-ih)*100,el.style.width=pos+"%"):el.style.width="0%"}window.onload=function(){d=document,b=d.body,de=d.documentElement,f=function(){tapeline()},b.onresize=f,b.onclick=f,b.onscroll=f};
+&#60;script&#62;function tapeline(){wh=Math.max(b.scrollHeight,b.offsetHeight,de.clientHeight,de.scrollHeight,de.offsetHeight),ph=b.offsetHeight,el=d.querySelector("#tapeline"),ih=window.innerHeight,buffer=100,null===el?(tl=d.createElement("section"),tls=tl.style,tls.position="fixed",tls.top="0",tls.left="0",tls.background="#000",tls.height="5px",tl.id="tapeline",b.appendChild(tl)):wh-ih>buffer?(pos=window.pageYOffset/(wh-ih)*100,el.style.width=pos+"%"):el.style.width="0%"}window.onload=function(){d=document,b=d.body,de=d.documentElement,f=function(){tapeline()},b.onresize=f,b.onclick=f,b.onscroll=f};&#60;/script&#62;
 		</pre>
 		<span class="tr w-100 dib moon-gray f6">592 bytes</span>
 
