@@ -1,0 +1,23 @@
+{
+  "name": "jkulton.github.io",
+  "version": "1.0.0",
+  "description": "personal site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkulton/jkulton.github.io.git"
+  },
+  "author": "jkulton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkulton/jkulton.github.io/issues"
+  },
+  "homepage": "https://github.com/jkulton/jkulton.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uncss": "^1.0.6"
+  }
+}
