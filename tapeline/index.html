@@ -3,7 +3,6 @@ layout: default
 ---
 
 <section class="f5 lh-copy pa4-ns pa3 mw7 center">
-	<a class="absolute top-1 left-1 black f6 b no-underline dn di-ns" href="https://github.com/jkulton/tapeline.js">Github</a>
 	<h1 class="tc mt3 f3 f2-ns">
 		tape
 		<svg width="84px" height="169px" viewBox="0 0 84 169" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -27,13 +26,13 @@ layout: default
 			</g>
 		</svg>
 		ine.js</h1>
-		<p class="tc f5 gray mb4">A simple JavaScript scroll indicator.</p>
-		<section class="bg-white pa3 pa4-ns bs-1">
+		<p class="tc f5 gray mb3">A simple JavaScript scroll indicator.</p>
+		<section class="bg-white ph3 ph4-ns">
 		<section class="w-100 tc">
-		<a id="copy" class="f6 link dim br2 ph3 pv2 dib ttu b white bg-dark-gray" onclick="document.querySelector('#long-content').style.display='initial';document.querySelector('#copy').style.display='none'">See it in action</a>
+		<a id="copy" class="f6 link dim br2 ph3 pv2 ttu b white bg-dark-gray tracked" onclick="document.querySelector('#long-content').classList.toggle('dn');document.querySelector('#copy').classList.toggle('dn')">See it in action</a>
 		</section>
 
-		<section id="long-content" style="display:none;">
+		<section id="long-content" class="dn">
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
 
