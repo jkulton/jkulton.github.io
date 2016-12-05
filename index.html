@@ -2,19 +2,65 @@
 layout: default
 title: Jon Kulton
 ---
-<section class="w-100 h-100 dots">
+<section class="dots h-100 w-100 fl bg-center cover overflow-y-auto">
 
-	<section class="mh4 mh5-ns pt4 pt6-ns cf mw6">
+		<section class="z-max mw7 relative bottom-0 left-0 pa3 pt5 pa4-ns mh4-m mh5-l mt5-ns pb3">
 
-		<h1 class="f2 dib mb0">JK</h1>
-		<p class="f5 mt3"><span class="b">Jon Kulton</span>, Designer - <a class="dim" href="https://www.patriotsoftware.com/">Patriot Software</a></p>
+			<h1 class="f-headline w-100 mb3 mt0">JK</h1>
 
-		<p class="f5 lh-copy">I'm a UX designer from Ohio. I like learning the "Why" behind users, needs, and systems.</p>
+			<p class="f4 mt3"><span class="b">Jon Kulton</span>, Designer</p>
 
-		<p class="f5 lh-copy">Right now I'm learning about Javascript. I built a tool called <a class="dim" href="/lexicon">Lexicon</a> to quickly search functional CSS libraries. As a first venture into Javascript event listeners I made a tiny scroll indicator, <a class="dim" href="/tapeline">Tapeline</a>.</p>
+			<p class="f4 lh-copy">I'm a UX designer from Ohio. I like learning the "Why" behind users, needs, and systems. Right now I'm at <a class="dim b" href="https://www.patriotsoftware.com/">Patriot Software</a> making something awesome.</p>
 
-		<p class="f5 lh-copy">Other work and projects I've contributed to are available on <a class="dim" href="http://github.com/jkulton">Github</a> and <a class="dim" href="http://codepen.io/jkulton">CodePen</a>. I'm available for contact via <a class="dim" href="http://twitter.com/jkulton">Twitter</a>.</p>
-		
+			<h2 class="w-100 mv4 ttu tracked f4 bw3">Projects</h2>
+
+			<section class="w-100 flex flex-wrap">
+				<a href="/lexicon" class="dim black no-underline w-100 w-50-ns">
+					<h3 class="underline mb1 f4 mt0 mt0">Lexicon</h3>
+					<p class="mt1 dark-gray">Paste CSS, search styles quickly</p>
+				</a>
+
+				<a href="/tapeline" class="dim black no-underline w-100 w-50-ns">
+					<h3 class="underline mb1 f4 mt0">tapeline.js</h3>
+					<p class="mt1 dark-gray">Tiny webpage scroll indicator</p>
+				</a>
+
+				<a href="https://github.com/jkulton/pbFerry" class="dim black no-underline w-100 w-50-ns">
+					<h3 class="underline mb1 f4 mt0">pbFerry</h3>
+					<p class="mt1 dark-gray">.webloc uploader for Pinboard</p>
+				</a>
+			</section>
+
+			<ul class="list pl0 f4 mv4">
+				<li class="dib mr2"><a href="https://github.com/jkulton" class="black b dim">Github</a></li>
+				<li class="dib mr2"><a href="http://codepen.io/jkulton/" class="black b dim">CodePen</a></li>
+				<li class="dib mr2"><a href="https://twitter.com/jkulton" class="black b dim">Twitter</a></li>
+			</ul>
+			
 	</section>
 
 </section>
+<script>
+var colors = ['5fc9f8', 'fecb2e', 'fd9426', '147efb', '53d769', 'fc3d39'];
+function randomizer(num) { return Math.floor((Math.random() * num)); }
+
+for (i = 1; i < 50; i++) {
+	var ranSize = randomizer(5);
+	td = document.createElement("span");
+	tds = td.style;
+	tds.position = "absolute";
+	tds.top = randomizer(95) + "vh"; 
+	tds.left = randomizer(110) + "vw";
+	tds.margin = "1rem";
+	tds.background = "#" + colors[randomizer(6)];
+	tds.height = ranSize + "vw";
+	tds.width = ranSize + "vw";
+	tds.zIndex = randomizer(8);
+	tds.borderRadius = "100px";
+	tds.transition = "200ms ease all";
+	tds.opacity = + (randomizer(3) + 1) * .1;
+	td.id = "dot" + i;
+	td.classList = "dot";
+	document.querySelector(".dots").appendChild(td);
+}
+</script>
