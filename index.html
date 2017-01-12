@@ -46,6 +46,7 @@ function randomizer(num) { return Math.floor((Math.random() * num)); }
 
 for (i = 1; i < 35; i++) {
 	var ranSize = randomizer(5);
+	var ranOpacity = randomizer(7) * .1;
 	td = document.createElement("span");
 	tds = td.style;
 	tds.position = "absolute";
@@ -56,9 +57,15 @@ for (i = 1; i < 35; i++) {
 	tds.height = ranSize + "vw";
 	tds.width = ranSize + "vw";
 	tds.zIndex = randomizer(8);
-	tds.borderRadius = "100px";
+	tds.transform = "rotate(" + randomizer(90) + "deg)";
+	tds.borderRadius = "100%";
 	tds.transition = "200ms ease all";
-	tds.opacity = + (randomizer(3) + 1) * .1;
+	tds.opacity = ranOpacity;
+	if (ranOpacity < .5 && ranSize > 2) {
+		tds.filter = 'blur(' + ranSize + 'px)';
+	} else if (ranOpacity >= .5) {
+		tds.boxShadow = '0 1px 1px 0 rgba(0,0,0,0.15)';
+	}
 	td.id = "dot" + i;
 	td.classList = "dot";
 	document.querySelector(".dots").appendChild(td);
