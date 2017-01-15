@@ -1,6 +1,6 @@
 var app = angular.module('todo', ['base64']);
 
-app.controller('TodoController', ['$scope', '$base64', '$location', function($scope, $base64, $location) {
+app.controller('TodoController', ['$scope', '$base64', '$location', '$document', '$timeout', function($scope, $base64, $location, $document, $timeout) {
 
   	$scope.parsed = '';
   	$scope.checks = [];
@@ -8,16 +8,12 @@ app.controller('TodoController', ['$scope', '$base64', '$location', function($sc
   	$scope.parsedChecks = [];
 
 	$scope.runOnLoad = function() {
-		if($location.path()) {
+		if($location.path() && $location.path() !== '/') {
   			var base64EncodedString = decodeURIComponent($location.path().slice(1));
 			var decodedString = $base64.decode(base64EncodedString);
 
-			console.log(decodedString);
-
 			var saved = decodedString.split(',');
 			var savedChecks = saved[0].split('');
-
-			console.log(savedChecks);
 
 			saved.shift();
 
@@ -25,8 +21,6 @@ app.controller('TodoController', ['$scope', '$base64', '$location', function($sc
 				$scope.parsedChecks = [];
 
 			for (var i = 0; i < $scope.todos.length; i++) {
-
-
 				if(savedChecks[i] === "0") {
 					$scope.checks.push(false);
 				} else if (savedChecks[i] === "1") {
@@ -34,12 +28,26 @@ app.controller('TodoController', ['$scope', '$base64', '$location', function($sc
 				}
 
 			}
+  		} else {
+  			$scope.addTodo();
   		}
 	}
 
-  	$scope.addTodo = function(scope) {
+	$scope.deleteTodo = function(which) {
+		$scope.todos.splice(which, 1);
+		$scope.checks.splice(which, 1);
+		$scope.parseTodos();
+	}
+
+  	$scope.addTodo = function() {
   		$scope.todos.push('');
-  		$scope.checks.push(false);
+ 		$scope.checks.push(false);
+
+        $timeout(function() {
+          var lastTodo = $scope.todos.length - 1;
+          document.getElementById('todo-' + lastTodo).focus();
+        }, 0);
+
   	}
 
   	$scope.parseTodos = function() {
@@ -50,37 +58,22 @@ app.controller('TodoController', ['$scope', '$base64', '$location', function($sc
   		for (var i = 0; i < $scope.todos.length; i++) {
   			$scope.todos[i] = $scope.todos[i].replace(",","");
 
-  			//console.log($scope.checks[i]);
-
   			if ($scope.checks[i] === true) {
-  				//console.log(i + ' is true');
   				$scope.parsedChecks.push('1');
   			} else if ($scope.checks[i] === false || $scope.checks[i] === null) {
-  				//console.log(i + ' is false');
   				$scope.parsedChecks.push('0');
   			}
 
   		}
 
   	    $scope.checkString = $scope.parsedChecks.join("");
-
-  	    console.log($scope.checkString);
-
   		$scope.parsed = $scope.todos.join(',');
-
   		$scope.parsed = $scope.checkString + "," + $scope.parsed;
 
 		var base64EncodedString = $base64.encode($scope.parsed);
 		var urlSafeBase64EncodedString = encodeURIComponent(base64EncodedString);
 
-  		// console.log('size of the compressed sample is ' + urlSafeBase64EncodedString.length);
-
-  		// console.log('\n\n' + urlSafeBase64EncodedString + '\n\n');
-
   		$location.path(urlSafeBase64EncodedString);
-
   	}
-  	
-  	//$scope.addTodo();
   	$scope.runOnLoad();
 }]);

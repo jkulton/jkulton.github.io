@@ -6,26 +6,37 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>textarea:focus{outline-color:gold;}</style>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-base64/2.0.5/angular-base64.min.js"></script>
+     	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+     	<meta http-equiv="Pragma" content="no-cache"/>
+     	<meta http-equiv="Expires" content="0"/>
 	</head>
-	<body ng-controller="TodoController" class="mw7 center pa3 bg-near-white">
-		<h1 class="ttu tc tracked mt2 mt4-ns flex-ns items-center-ns justify-center-ns">Todo<span class="moon-gray ml2-ns f6 italic db dib-ns">beta</span></h1>
+	<body ng-controller="TodoController" class="mw7 center pa3">
+		<h1 class="ttu tc tracked mt2">Todo
+		<span class="moon-gray ml2-ns f6 italic db">beta</span></h1>
 
 		<ul class="todo-list">
-			<li ng-class="{ complete : checks[$index] }" ng-repeat="todo in todos track by $index">
+			<li ng-class="{ complete : checks[$index] }" class="relative" ng-repeat="todo in todos track by $index">
 				<input ng-model="checks[$index]" ng-click="parseTodos()" class="checkbox" type="checkbox" />
-				<input ng-keyup="$event.keyCode == 13 ? addTodo() : null" ng-model="todos[$index]" type="text" ng-change="parseTodos()" class="todo" />
+				<input id="todo-{{$index}}" ng-keyup="$event.keyCode == 13 ? addTodo() : null" ng-model="todos[$index]" type="text" ng-change="parseTodos()" class="todo" />
+				<span class="absolute right-0 delete" ng-click="deleteTodo($index)">
+				[x]
+				</span>
 			</li>
 		</ul>
-		<button ng-click="addTodo()">Add another</button>
+		<a class="add" ng-click="addTodo()">+ Add Todo</a>
 
 		<script src="app.js"></script>
 	</body>
 </html>
 
 <style>
+html, body {
+
+}
 ul {
 	list-style: none;
 	padding: 0;
+	font-family: 'Droid Sans Mono', monospace;
 
 }
 .item {
@@ -42,7 +53,6 @@ ul {
 	width: 90%;
 	border: 0;
 	background: transparent;
-	font-family: monospace;
 	font-size: 1.5rem;
 	position: relative;
 	display: inline-block;
@@ -57,17 +67,31 @@ ul {
 	text-decoration: line-through;
 }
 
-button {
-	background: #000;
-	color: white;
+.add {
+	background: transparent;
+	color: #a6a6a6;
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: .16rem;
 	border: 0;
-	border-radius: 4px;
-	padding: .5rem 1rem;
-	margin: 0 auto;
-	width: 50%;
+	max-width: 20rem;
 	display: block;
+	margin-bottom: 2rem;
+
+}
+.add:hover {
+	border-color: #808080;
+	color: #808080;
+}
+
+.delete {
+	color: #ccc;
+}
+
+.delete:hover {
+	color: red;
+}
+.delete:hover, .add:hover {
+	cursor: pointer;
 }
 </style>
