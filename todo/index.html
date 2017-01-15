@@ -11,12 +11,12 @@
 		<h1 class="ttu tc tracked mt2 mt4-ns flex-ns items-center-ns justify-center-ns">Todo<span class="moon-gray ml2-ns f6 italic db dib-ns">beta</span></h1>
 
 		<ul class="todo-list">
-		<li ng-repeat="todo in todos track by $index">
-		<input class="checkbox" type="checkbox" />
-		<input ng-keyup="$event.keyCode == 13 ? addTodo() : null" ng-model="todos[$index]" type="text" ng-change="parseTodos()" class="todo" />
-		</li>
+			<li ng-class="{ complete : checks[$index] }" ng-repeat="todo in todos track by $index">
+				<input ng-model="checks[$index]" ng-click="parseTodos()" class="checkbox" type="checkbox" />
+				<input ng-keyup="$event.keyCode == 13 ? addTodo() : null" ng-model="todos[$index]" type="text" ng-change="parseTodos()" class="todo" />
+			</li>
 		</ul>
-		<a ng-click="addTodo()">Add another</a>
+		<button ng-click="addTodo()">Add another</button>
 
 		<script src="app.js"></script>
 	</body>
@@ -25,6 +25,8 @@
 <style>
 ul {
 	list-style: none;
+	padding: 0;
+
 }
 .item {
 	display: block;
@@ -48,5 +50,24 @@ ul {
 
 .todo:focus {
 	outline: none;
+}
+
+.complete input {
+	color: #a6a6a6;
+	text-decoration: line-through;
+}
+
+button {
+	background: #000;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: .16rem;
+	border: 0;
+	border-radius: 4px;
+	padding: .5rem 1rem;
+	margin: 0 auto;
+	width: 50%;
+	display: block;
 }
 </style>
