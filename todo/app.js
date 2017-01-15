@@ -31,6 +31,9 @@ app.controller('TodoController', ['$scope', '$base64', '$location', '$document',
 	}
 
 	$scope.deleteTodo = function(which) {
+    if ($scope.todos.length === 1) {
+      return;
+    }
 		$scope.todos.splice(which, 1);
 		$scope.checks.splice(which, 1);
 		$scope.parseTodos();
