@@ -1,0 +1,52 @@
+<html ng-app="todo">
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+		<link rel="stylesheet" href="../styles.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>textarea:focus{outline-color:gold;}</style>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-base64/2.0.5/angular-base64.min.js"></script>
+	</head>
+	<body ng-controller="TodoController" class="mw7 center pa3 bg-near-white">
+		<h1 class="ttu tc tracked mt2 mt4-ns flex-ns items-center-ns justify-center-ns">Todo<span class="moon-gray ml2-ns f6 italic db dib-ns">beta</span></h1>
+
+		<ul class="todo-list">
+		<li ng-repeat="todo in todos track by $index">
+		<input class="checkbox" type="checkbox" />
+		<input ng-keyup="$event.keyCode == 13 ? addTodo() : null" ng-model="todos[$index]" type="text" ng-change="parseTodos()" class="todo" />
+		</li>
+		</ul>
+		<a ng-click="addTodo()">Add another</a>
+
+		<script src="app.js"></script>
+	</body>
+</html>
+
+<style>
+ul {
+	list-style: none;
+}
+.item {
+	display: block;
+
+}
+.checkbox {
+	display: inline-block;
+}
+.todo {
+	padding: .5rem;
+	margin: .5rem 0;
+	font-size: 1.25rem;
+	width: 90%;
+	border: 0;
+	background: transparent;
+	font-family: monospace;
+	font-size: 1.5rem;
+	position: relative;
+	display: inline-block;
+}
+
+.todo:focus {
+	outline: none;
+}
+</style>
