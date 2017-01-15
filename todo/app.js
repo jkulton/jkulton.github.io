@@ -1,4 +1,4 @@
-var app = angular.module('todo', ['base64', 'angular-clipboard']);
+var app = angular.module('todo', ['base64', 'ngclipboard']);
 
 app.controller('TodoController', ['$scope', '$base64', '$location', '$document', '$timeout', function($scope, $base64, $location, $document, $timeout) {
   	$scope.parsed = '';
@@ -7,12 +7,8 @@ app.controller('TodoController', ['$scope', '$base64', '$location', '$document',
   	$scope.parsedChecks = [];
   	$scope.share = $location.absUrl();
 
-    $scope.success = function() {
+    $scope.copied = function() {
       alert("Link copied to clipboard!");
-    }
-
-    $scope.fail = function() {
-      alert("Something went wrong. You can copy the url from the address bar to share.");
     }
 
 	$scope.runOnLoad = function() {
