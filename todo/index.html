@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>textarea:focus{outline-color:gold;}</style>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-base64/2.0.5/angular-base64.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-clipboard/1.5.0/angular-clipboard.min.js"></script>
      	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
      	<meta http-equiv="Pragma" content="no-cache"/>
      	<meta http-equiv="Expires" content="0"/>
@@ -24,11 +25,7 @@
 			</li>
 		</ul>
 
-		<a ng-click="showShare = true" ng-class="{ 'underline mb3' : !showShare }" class="db tc mb2 center mt3 moon-gray">Share this list</a>
-
-		<section ng-show="showShare" class="mt2 mb4 pa3 gray bg-near-white ba b--moon-gray br2 overflow-x-auto">
-			{{ share }}
-		</section>
+		<a class="db tc mb2 center mt3 moon-gray" clipboard supported="supported" text="share" on-copied="success()" on-error="fail(err)">Share this list</a>
 
 		<script src="app.js"></script>
 	</body>
