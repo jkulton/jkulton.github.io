@@ -1,0 +1,32 @@
+<html>
+  <head><title>Where's 😎?</title></head>
+  <body>
+  <script>
+  let faces = ['😀','😁','😂','😃','😄','😅','😆','😇','😉','😊','😋','😌','😍','😎','😏','😐','😑','😒','😓','😔','😕','😖','😗','😘','😙','😚','😛','😜','😝','😞','😟','😠','😢','😣','😤','😥','😦','😧','😨','😩','😪','😫','😬','😭','😮','😯','😰','😱','😲','😳','😴','😵','😶','😷','🙁','🙂','🙃','🙄'];
+
+  let getThought = function() {
+    return faces[rand(faces.length)];
+  }
+
+  let rand = function(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  for (i = 0; i < 5000; i++) {
+    document.write('<span>' + getThought() + '</span>');
+  }
+  document.write('<span style="z-index: 9999;font-size:1rem" onclick="alert(\'You Win!\')">🤔</span>');
+
+  let thoughts = document.querySelectorAll('span');
+
+  thoughts.forEach((thought) => {
+    thought.style.position = 'absolute';
+    thought.style.left = rand(100) + 'vw';
+    thought.style.top = rand(100) + 'vh';
+    if (thought.innerHTML != '😎') {
+      thought.style.fontSize = rand(5) + 'rem';
+    }
+  });
+  </script>
+  </body>
+</html>
