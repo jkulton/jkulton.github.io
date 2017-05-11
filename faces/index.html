@@ -1,32 +1,62 @@
 <html>
-  <head><title>Where's 🤔?</title></head>
-  <body>
+<head><title>Where's 🤔?</title></head>
+<body>
   <script>
-  let faces = ['😀','😁','😂','😃','😄','😅','😆','😇','😉','😊','😋','😌','😍','😎','😏','😐','😑','😒','😓','😔','😕','😖','😗','😘','😙','😚','😛','😜','😝','😞','😟','😠','😢','😣','😤','😥','😦','😧','😨','😩','😪','😫','😬','😭','😮','😯','😰','😱','😲','😳','😴','😵','😶','😷','🙁','🙂','🙃','🙄'];
+    let round = 0;
+    let total = 0;
+    let faces = ['😀','😁','😂','😃','😄','😅','😆','😇','😉','😊','😋','😌','😍','😎','😏','😐','😑','😒','😓','😔','😕','😖','😗','😘','😙','😚','😛','😜','😝','😞','😟','😠','😢','😣','😤','😥','😦','😧','😨','😩','😪','😫','😬','😭','😮','😯','😰','😱','😲','😳','😴','😵','😶','😷','🙁','🙂','🙃','🙄'];
 
-  let getThought = function() {
-    return faces[rand(faces.length)];
-  }
-
-  let rand = function(max) {
-    return Math.floor(Math.random() * max);
-  }
-
-  for (i = 0; i < 5000; i++) {
-    document.write('<span>' + getThought() + '</span>');
-  }
-  document.write('<span style="z-index: 9999;font-size:1rem" onclick="alert(\'You Win!\')">🤔</span>');
-
-  let thoughts = document.querySelectorAll('span');
-
-  thoughts.forEach((thought) => {
-    thought.style.position = 'absolute';
-    thought.style.left = rand(100) + 'vw';
-    thought.style.top = rand(100) + 'vh';
-    if (thought.innerHTML != '🤔') {
-      thought.style.fontSize = rand(5) + 'rem';
+    let getEmoji = () => {
+      return faces[rand(faces.length) - 1];
     }
-  });
+
+    let rand = (max) => {
+      return Math.floor((Math.random() * max) + 1);
+    }
+
+    let end = () => {
+      document.body.innerHTML = '<span style="font-family: sans-serif;font-size: 3rem;display: block;text-align: center;margin-top: 4rem;">🤔<br/>You finished the game in ' + total + ' seconds</span>';
+    }
+
+    let populate = () => {
+      document.body.innerHTML = '';
+      round++;
+
+      let d = new Date();
+      let roundStartTime = d.getTime() / 1000;
+
+      for (i = 0; i < round * 250; i++) {
+        document.write('<span>' + getEmoji() + '</span>');
+      }
+      document.write('<span style="z-index: 9999;font-size:1rem" onclick="found(' + roundStartTime + ')">🤔</span>');
+
+      document.querySelectorAll('span').forEach((span) => {
+        span.style.position = 'absolute';
+        span.style.left = rand(100) + 'vw';
+        span.style.top = rand(100) + 'vh';
+        span.style.fontSize = rand(5) + 'rem';
+      });
+
+    }
+
+    let found = (roundStartTime) => {
+      let d = new Date();
+      let roundEndTime = d.getTime() / 1000;
+      let roundTotal = Math.floor(roundEndTime - roundStartTime);
+      total += roundTotal;
+
+      alert("Found it! You finished round " + round + " in " + Math.floor(roundEndTime - roundStartTime) + " seconds.");
+
+      if (round < 5) {
+        populate();
+      } else {
+        alert("You've finished the game!");
+        end();
+      }
+    }
+
+    alert("Find the 🤔!");
+    populate();
   </script>
-  </body>
+</body>
 </html>
