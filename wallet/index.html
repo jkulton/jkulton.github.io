@@ -1,1 +1,349 @@
+<html>
+	<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wallets</title>
 
+   <style>
+   html,
+   body {
+    background: #fff;
+    font-family: 'Avenir Next', sans-serif;
+    margin: 0;
+    padding: 0;
+   }
+
+   .bg-btc { background: #FF9900; }
+   .bg-ltc { background: #989898; }
+   .bg-eth { background: #7c87c3; }
+
+   .icon {
+    width: 25px;
+   } 
+
+   .header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+   }
+
+   .header .add-address-form {
+    flex: 100%;
+   }
+
+   .header .add-address-button {
+    margin-left: auto;
+   }
+
+   .address {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+   }
+
+   span.name {
+      font-size: 1.5rem;
+      margin: 0 .5rem;
+   }
+
+   span.address-address {
+    // flex: 100%;
+    // margin-top: .5rem;
+    color: #a6a6a6;
+   }
+
+   .delete {
+    margin-left: auto;
+   }
+
+   .tracked-tight {
+    letter-spacing: -.06rem;
+    font-weight: bold;
+   }
+
+
+
+
+   html,
+   body {
+    background: linear-gradient(#242a38, #111727);
+   }
+
+   .address-book {
+    padding: 1rem;
+   }
+
+   .card {
+    max-width: 350px;
+    background: white;
+    margin: 0 auto 1rem auto;
+    position: relative;
+   }
+
+   .card-header {
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+   }
+
+   .card-body {
+    padding: 1rem;
+    border-bottom: 1px dashed #ddd;
+   }
+
+   .header {
+    max-width: 350px;
+    margin: 1rem auto 0 auto;
+    border-bottom: 0;
+    color: white;
+    font-size: 1.25rem;
+   }
+
+   .header .add-address-form {
+    background: white;
+    border-radius: 4px;
+    padding: 1rem;
+   }
+
+   .header label {
+    color: #000;
+    font-weight: bold;
+    display: block;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+   }
+
+   .header input {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: .25rem;
+
+   }
+
+   .card-body input {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: .25rem;
+    border-radius: 4px;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #808080;
+   }
+
+   .card-qr {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+   }
+
+   .card-delete {
+    position: absolute;
+    top: 0rem;
+    right: .5rem;
+    transform: rotate(45deg);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.5);
+   }
+
+   .card-qr img {
+    max-width: 250px;
+    margin: 1rem;
+   }
+
+   span.name {
+    margin: 0 .5rem;
+    font-family: 'Avenir NExt';
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .16rem;
+    display: flex;
+    align-items: center;
+   }
+
+   span.name img {
+    width: 25px;
+    margin-right: .5rem;
+   }
+
+   .card-header {
+    color: white;
+    padding: 1rem .5rem;
+    text-align: center;
+    font-size: 1.25rem;
+    /* border-top: 2px dashed #44484e; */
+    border-radius: 4px 4px 0 0;
+   }
+
+   .card {
+    max-width: 350px;
+    /* background: white; */
+    margin: 0 auto 1rem auto;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+   }
+
+   .add-address-button {
+    background: none;
+    color: white;
+    text-decoration: underline;
+    font-size: 1rem;
+    border: 0;
+
+   }
+   </style> 
+  </head>
+
+
+	<body onload="loadAddresses()">
+
+    <section class="wrapper">
+
+      <section class="header">
+
+        <h1 style="margin: 0;">Wallets</h1>
+
+        <button onclick="toggleDisplay('.add-address-form')" class="add-address-button">Add Wallet</button>
+
+        <section class="add-address-form" style="display: none;">
+          <label>Name:</label>
+          <input type="text" class="form-name" name="name"/>
+          <label>Address:</label>
+          <input type="text" class="form-address" name="address"/>
+          <label>Type:</label>
+          <select class="form-type">
+            <option value="btc">Bitcoin</option>
+            <option value="ltc">Litecoin</option>
+            <option value="eth">Ethereum</option>
+          </select>
+          <br/>
+          <br/>
+          <button onclick="submitForm()" class="button">Add Address</button>
+        </section>
+
+      </section>
+
+      <section class="address-book"></section>
+
+      <section class="moda-wrapper">
+        <section class="modal"></section>
+      </section>
+
+    </section>
+
+   <script>
+
+    function deleteAddress(index) {
+      loadAddresses();
+      let currentAddresses = JSON.parse(localStorage.getItem('addresses'));
+
+      if (index > -1) {
+        currentAddresses.splice(index, 1);
+
+        localStorage.setItem('addresses', JSON.stringify(currentAddresses));
+
+        loadAddresses();
+      }
+    };
+
+    function toggleDisplay(el) {
+      let element = document.querySelector(el);
+
+      if (element.style.display === 'none') {
+        element.style.display = 'initial';
+      } else {
+        element.style.display = 'none';
+      }
+    }
+
+    function submitForm() {
+      let currentAddresses = JSON.parse(localStorage.getItem('addresses'));
+      let formName = document.querySelector('.form-name');
+      let formAddress = document.querySelector('.form-address');
+      let formType = document.querySelector('.form-type');
+      let address = {}
+
+      address.name = formName.value;
+      address.address = formAddress.value;
+      address.type = formType.value;
+
+      currentAddresses.push(address);
+
+      localStorage.setItem('addresses', JSON.stringify(currentAddresses));
+
+      toggleDisplay('.add-address-form');
+      loadAddresses();
+    }
+
+    function loadAddresses() {
+      if (localStorage.getItem('addresses') === null || localStorage.getItem('addresses') === "") {
+        let arr = [];
+        localStorage.setItem('addresses', JSON.stringify(arr));
+      }
+
+      let savedAddresses = JSON.parse(localStorage.getItem('addresses')) || [];
+      let addressBook = document.querySelector('.address-book');
+      let addressStr = ''
+
+
+      // savedAddresses.forEach(function(address, index) {
+      //   console.log(index);
+      //   addressStr += '<section data-id="' + index + '" class="address ' + address.type + '-address' + '">' +
+      //                   '<img class="icon" src="./' + address.type + '.svg"/>' +
+      //                   '<span class="name tracked-tight">' + address.name + '</span>' +
+      //                   '<span class="address-address">'+ address.address + '</span>' +
+      //                   '<a class="delete" onclick="deleteAddress(' + index + ')">Delete</a>' +
+      //                 '</section>';
+      // });
+
+      savedAddresses.forEach(function(address, index) {
+        console.log(index);
+        addressStr += '<section data-id="' + index + '" class="card ' + address.type + '-address' + '">' +
+                        '<section class="card-header bg-' + address.type + '">' +
+                          '<span class="name"><img src="./' + address.type + '.svg"/>' + address.name + '</span>' +
+                          '<a class="card-delete" onclick="deleteAddress(' + index + ')">+</a>' +
+                        '</section>' +
+                        '<section class="card-body">' +
+                          '<input type="text" value="' + address.address + '">' +
+                        '</section>' +
+                        '<section class="card-qr">' +
+                          '<img src="https://api.qrserver.com/v1/create-qr-code/?data=' + address.address + '&amp;size=500x500" alt="" title="" />' +
+                        '</section>' +
+                      '</section>';
+      });
+
+      addressBook.innerHTML = addressStr;
+    }
+
+    function showModal(index) {
+      loadAddresses();
+      let currentAddresses = JSON.parse(localStorage.getItem('addresses'));
+
+      if (index > -1) {
+        modalStr = '';
+
+        currentAddresses.splice(index, 1);
+
+        localStorage.setItem('addresses', JSON.stringify(currentAddresses));
+
+        /*
+        '<img src="https://api.qrserver.com/v1/create-qr-code/?data=' + address.address + '&amp;size=500x500" alt="" title="" />' +
+        */
+      }
+
+      modalStr += '<a onclick="deleteAddress(' + index + ')">Delete</a>';
+
+    }
+
+   </script> 
+  </body>
+</html>
