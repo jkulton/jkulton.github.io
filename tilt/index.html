@@ -34,8 +34,10 @@
     }
 
     function updateBall(event) {
-      var xPercent = ((event.accelerationIncludingGravity.x * 5) + 50);
-      var yPercent = Math.abs(((event.accelerationIncludingGravity.y * 5) - 50));
+      var xValue = Math.round(event.accelerationIncludingGravity.x * 100)/100;
+      var yValue = Math.round(event.accelerationIncludingGravity.y * 100)/100;
+      var xPercent = ((xValue * 5) + 50);
+      var yPercent = Math.abs(((yValue * 5) - 50));
 
       ball.style.left = 'calc(' + xPercent + '%' + ' - 50px)';
       ball.style.top = 'calc(' + yPercent + '%' + ' - 50px)';
