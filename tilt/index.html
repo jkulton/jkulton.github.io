@@ -39,6 +39,7 @@
 
       ball.style.left = 'calc(' + xPercent + '%' + ' - 50px)';
       ball.style.top = 'calc(' + yPercent + '%' + ' - 50px)';
+      info.innerHTML = `x: ${event.accelerationIncludingGravity.x} | y: ${event.accelerationIncludingGravity.y}`;
     }
 
     function checkForWinner() {
