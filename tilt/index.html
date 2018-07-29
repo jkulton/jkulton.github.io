@@ -34,8 +34,8 @@
     }
 
     function updateBall(event) {
-      var xValue = Math.round(event.accelerationIncludingGravity.x * 100)/100;
-      var yValue = Math.round(event.accelerationIncludingGravity.y * 100)/100;
+      var xValue = Math.round(event.accelerationIncludingGravity.x * 10)/10;
+      var yValue = Math.round(event.accelerationIncludingGravity.y * 10)/10;
       var xPercent = ((xValue * 5) + 50);
       var yPercent = Math.abs(((yValue * 5) - 50));
 
