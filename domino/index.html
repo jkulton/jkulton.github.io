@@ -157,6 +157,8 @@
     </section>
 
     <section class="alpha"></section>
+    <section class="beta"></section>
+    <section class="gamma"></section>
 
     <style>
     * {
@@ -198,6 +200,9 @@
     <script>
     let loading = false;
     let alphaEl = document.querySelector('.alpha');
+    let betaEl = document.querySelector('.beta');
+    let gammaEl = document.querySelector('.gamma');
+
 
     function pushDomino() {
       if (loading) {
@@ -236,11 +241,17 @@
     };
 
     let handleTilt = function(event) {
-      let alpha = Math.floor(event.alpha);
+      //var absolute = Math.floor(event.absolute);
+      var alpha    = Math.floor(event.alpha);
+      var beta     = Math.floor(event.beta);
+      var gamma    = Math.floor(event.gamma);
       alphaEl.innerHTML = alpha;
-      if (alpha < 80 && alpha > 65) {
-        resetDominos();
-      }
+      betaEl.innerHTML = beta;
+      gammaEl.innerHTML = gamma;
+
+      // if (alpha < 80 && alpha > 65) {
+      //   resetDominos();
+      // }
     };
     </script>
   </body>
