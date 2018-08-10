@@ -242,16 +242,17 @@
 
     let handleTilt = function(event) {
       //var absolute = Math.floor(event.absolute);
-      var alpha    = Math.floor(event.alpha);
-      var beta     = Math.floor(event.beta);
-      var gamma    = Math.floor(event.gamma);
+      let alpha    = Math.floor(event.alpha);
+      let beta     = Math.floor(event.beta);
+      let gamma    = Math.floor(event.gamma);
       alphaEl.innerHTML = alpha;
       betaEl.innerHTML = beta;
       gammaEl.innerHTML = gamma;
 
-      // if (alpha < 80 && alpha > 65) {
-      //   resetDominos();
-      // }
+      if (beta < 20 && beta > 0) {
+        resetDominos();
+        beta = undefined;
+      }
     };
     </script>
   </body>
