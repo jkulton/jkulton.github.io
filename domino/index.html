@@ -241,13 +241,11 @@
     };
 
     let handleTilt = function(event) {
-      //var xValue = Math.round(event.accelerationIncludingGravity.x * 10)/10;
-      // if (xValue < -4) {
-      //   resetDominos();
-      // }
-
-      let alpha = event.alpha;
+      let alpha = Math.floor(event.alpha);
       alphaEl.innerHTML = alpha;
+      if (alpha < 80 && alpha > 65) {
+        resetDominos();
+      }
     };
     </script>
   </body>
