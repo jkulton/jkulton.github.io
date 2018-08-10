@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <button onclick="resetDominos()">Reset</button>
     <section class="wrapper" style="text-align: center">
       <label class="domino-wrapper" onclick="pushDomino()">
         <span class="domino"></span>
@@ -225,19 +226,13 @@
       }
       loading = true;
       let dominos = document.querySelectorAll('.domino-wrapper input');
-      let timeout = 0;
 
       dominos.forEach(function(domino) {
-        setTimeout(function() {
-          domino.click();
-        }, (timeout));
-        timeout += 100;
+        domino.checked = false;
       });
 
-      setTimeout(function() {
-        window.removeEventListener('deviceorientation', handleTilt);
-        loading = false;
-      }, 3000);
+      window.removeEventListener('deviceorientation', handleTilt);
+      loading = false;
     };
 
     let handleTilt = function(event) {
