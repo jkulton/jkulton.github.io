@@ -1,0 +1,248 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <section class="wrapper" style="text-align: center">
+      <label class="domino-wrapper" onclick="pushDomino()">
+        <span class="domino"></span>
+      </label>
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+      <label class="domino-wrapper">
+        <input type="checkbox" />
+        <span class="domino"></span>
+      </label>
+
+
+    </section>
+
+    <style>
+    * {
+      margin:0;
+      padding: 0;
+    }
+    .wrapper {
+      margin: 20px;
+    }
+    .domino-wrapper {
+      display: inline-block;
+    }
+
+    .domino-wrapper input {
+      display: none;
+    }
+
+    .domino {
+      height: 40px;
+      width: 10px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      transition: 300ms ease all;
+      transform: rotate(0);
+      margin-right: 6px;
+      background: #fff;
+      border-radius: 2px
+    }
+
+    input:checked + .domino {
+      transform: rotate(60deg) translateY(-10px) translateX(13px) skewX(1deg);
+      border-right-width: 2px;
+      //border-bottom-width: 2px;
+      //box-shadow: 2px -1px 1px rgba(0,0,0,0.15);
+      margin-right: 5px;
+    }
+    </style>
+
+    <script>
+    let loading = false;
+
+    function pushDomino() {
+      if (loading) {
+        return;
+      }
+      loading = true;
+      let dominos = document.querySelectorAll('.domino-wrapper input');
+      let timeout = 0;
+
+      dominos.forEach(function(domino) {
+        setTimeout(function() {
+          domino.click();
+        }, (timeout));
+        timeout += 100;
+      });
+
+      setTimeout(function() {
+        window.addEventListener('resize', handleTilt);
+        loading = false;
+      }, 3000);
+    }
+
+    function resetDominos() {
+      if (loading) {
+        return;
+      }
+      loading = true;
+      let dominos = document.querySelectorAll('.domino-wrapper input');
+      let timeout = 0;
+
+      dominos.forEach(function(domino) {
+        setTimeout(function() {
+          domino.click();
+        }, (timeout));
+        timeout += 100;
+      });
+
+      setTimeout(function() {
+        window.removeEventListener('resize', handleTilt);
+        loading = false;
+      }, 3000);
+    };
+
+    let handleTilt = function(event) {
+      var xValue = Math.round(event.accelerationIncludingGravity.x * 10)/10;
+      if (xValue < -4) {
+        resetDominos();
+      }
+    };
+    </script>
+  </body>
+</html>
