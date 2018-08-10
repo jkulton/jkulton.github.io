@@ -155,6 +155,8 @@
 
     </section>
 
+    <section class="alpha"></section>
+
     <style>
     * {
       margin:0;
@@ -194,6 +196,7 @@
 
     <script>
     let loading = false;
+    let alphaEl = document.querySelector('.alpha');
 
     function pushDomino() {
       if (loading) {
@@ -238,13 +241,13 @@
     };
 
     let handleTilt = function(event) {
-      // var xValue = Math.round(event.accelerationIncludingGravity.x * 10)/10;
+      //var xValue = Math.round(event.accelerationIncludingGravity.x * 10)/10;
       // if (xValue < -4) {
       //   resetDominos();
       // }
 
       let alpha = event.alpha;
-      document.querySelector('.alpha').innerHTML = alpha;
+      alphaEl.innerHTML = alpha;
     };
     </script>
   </body>
