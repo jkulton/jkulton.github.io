@@ -220,7 +220,7 @@
       });
 
       setTimeout(function() {
-        window.addEventListener('deviceorientation', handleTilt);
+        window.addEventListener('deviceorientation', handleTilt, true);
         loading = false;
       }, 3000);
     }
@@ -236,20 +236,15 @@
         domino.checked = false;
       });
 
-      window.removeEventListener('deviceorientation', handleTilt);
+      window.removeEventListener('deviceorientation', handleTilt, true);
       loading = false;
     };
 
     let handleTilt = function(event) {
-      //var absolute = Math.floor(event.absolute);
-      let alpha    = Math.floor(event.alpha);
-      let beta     = Math.floor(event.beta);
-      let gamma    = Math.floor(event.gamma);
-      alphaEl.innerHTML = alpha;
+      let beta = Math.floor(event.beta);
       betaEl.innerHTML = beta;
-      gammaEl.innerHTML = gamma;
 
-      if (beta < 20 && beta > 0) {
+      if (Math.floor(event.beta) < 20 && Math.floor(event.beta) > 0) {
         resetDominos();
         beta = undefined;
       }
