@@ -45,34 +45,3 @@ title: Jon Kulton
 	</section>
 
 </section>
-<script>
-var colors = ['5fc9f8', 'fecb2e', 'fd9426', '147efb', '53d769', 'fc3d39'];
-function randomizer(num) { return Math.floor((Math.random() * num)); }
-
-for (i = 1; i < 35; i++) {
-	var ranSize = randomizer(5);
-	var ranOpacity = randomizer(7) * .1;
-	td = document.createElement("span");
-	tds = td.style;
-	tds.position = "absolute";
-	tds.top = randomizer(95) + "vh"; 
-	tds.left = randomizer(110) + "vw";
-	tds.margin = "1rem";
-	tds.background = "#" + colors[randomizer(6)];
-	tds.height = ranSize + "vw";
-	tds.width = ranSize + "vw";
-	tds.zIndex = randomizer(8);
-	tds.transform = "rotate(" + randomizer(90) + "deg)";
-	tds.borderRadius = "100%";
-	tds.transition = "200ms ease all";
-	tds.opacity = ranOpacity;
-	if (ranOpacity < .5 && ranSize > 2) {
-		tds.filter = 'blur(' + ranSize + 'px)';
-	} else if (ranOpacity >= .5) {
-		tds.boxShadow = '0 1px 1px 0 rgba(0,0,0,0.15)';
-	}
-	td.id = "dot" + i;
-	td.classList = "dot";
-	document.querySelector(".dots").appendChild(td);
-}
-</script>
