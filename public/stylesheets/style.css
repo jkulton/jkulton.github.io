@@ -337,8 +337,6 @@ footer {
 }
 
 .managing-apps {
-  padding-top: 50px;
-  border-top: 1px solid #eee;
   max-width: 100%;
 }
 
@@ -357,6 +355,13 @@ div > iframe {
 
 .mothership-manage-container {
   max-width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 50px;
+  border-top: 1px solid #eee;
+}
+
+.mothership-manage-container a {
   display: flex;
   align-items: flex-end;
 }
