@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Gistdoc",
+    "link": "https://gistdoc.com",
+    "image": "/assets/images/gistdoc.png",
+    "description": "A site for viewing markdown Gists as blog-style pages",
+    "tags": ["TypeScript", "React"]
+  },
+  {
+    "title": "QR Bouncer",
+    "link": "https://qrbouncer.com",
+    "image": "/assets/images/qr-bouncer.png",
+    "description": "Generate a shareable, Coinbase-style bouncing QR code",
+    "tags": ["JavaScript"]
+  },
+  {
+    "title": "Topical",
+    "link": "https://topical-go.herokuapp.com",
+    "image": "/assets/images/topical.png",
+    "description": "A (very) minimalist message board written in Go",
+    "tags": ["Go"]
+  },
+  {
+    "title": "Mothership",
+    "link": "https://mothership.live",
+    "image": "/assets/images/mothership.png",
+    "description": "An open source and self hosted platform-as-a-service",
+    "tags": ["Node.js", "Docker"]
+  },
+  {
+    "title": "Ditto",
+    "link": "https://github.com/jkulton/ditto",
+    "image": "/assets/images/ditto.png",
+    "description": "A simple mock API for prototyping, testing, or fun",
+    "tags": ["TypeScript", "Cloudflare Workers"]
+  }
+]
