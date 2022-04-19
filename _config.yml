@@ -16,4 +16,6 @@ sass:
     - _sass
     - node_modules
 
+exclude: []
+
 include: ["node_modules/tailwindcss"]
