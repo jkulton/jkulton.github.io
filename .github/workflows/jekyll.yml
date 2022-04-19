@@ -13,14 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Install Dependencies
-      run: npm install
-    - name: Build the site in the jekyll/builder container
-      run: |
-         docker run \
-         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && bundle install && jekyll build --future"
-
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v2.5.0
       with:
