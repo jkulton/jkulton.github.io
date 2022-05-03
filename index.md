@@ -6,9 +6,24 @@ layout: default
 
 <p class="my-3 home-intro">I'm a Software Engineer from Ohio. I work at <a href="https://datadoghq.com" class="text-indigo-600 hover:underline">Datadog</a>, where I'm helping improve the reliability of the Metrics product. I have interests across the entire engineering stack, and I'm always up for working on something new.</p>
 
+
 <hr class="my-7">
 
-<h3 class="mt-2 mb-5 font-bold font-serif text-xl">Projects</h3>
+<h3 class="mt-2 mb-5 font-serif text-xl">Writing</h3>
+
+<ul>
+  {% for post in site.posts %}
+    <li class="flex justify-between items-center my-3" data-class="sm:mb-6">
+      <a class="text-indigo-600" href="{{ post.url }}">{{ post.title }}</a>
+      <div class="tabular-nums text-slate-600 text-sm">{{ post.date | date: "%b %Y" }}</div>
+    </li>
+  {% endfor %}
+</ul>
+ 
+
+<hr class="my-7">
+
+<h3 class="mt-2 mb-5 font-serif text-xl">Projects</h3>
 
 <ul>
   {% for item in site.data.projects limit: 4 %}
