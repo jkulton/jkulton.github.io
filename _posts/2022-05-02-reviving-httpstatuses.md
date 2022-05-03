@@ -2,6 +2,7 @@
 layout: post
 title: Reviving httpstatuses
 tldr: httpstatuses.com died in early 2022, but it was OSS! I forked the project and redeployed to <a href="https://httpstatuses.io">httpstatuses.io</a>.
+description: Whay happened to httpstatuses.com? I did some investigation, then forked and redeployed the old site to a new domain.
 permalink: /:year/:title
 ---
 
