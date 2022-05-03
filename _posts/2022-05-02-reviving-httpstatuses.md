@@ -33,3 +33,7 @@ I've placed the repo under a [GitHub org](https://github.com/httpstatuses) speci
 - I deployed the site using CloudFlare Pages
 
 I hope someone else might find the revived [httpstatuses.io](https://httpstatuses.io) useful!
+
+## Edit
+
+**Edit 1**: [Someone on Reddit asked](https://www.reddit.com/r/programming/comments/uhee08/reviving_httpstatusescom_now_httpstatusesio/i75tqx4/) when httpstatus.es stopped serving the old site (because it too serviced this site!) I looked into that a bit and it seems httpstatus.es was  the _original_ domain for the site, but then the project was moved to httpstatuses.com primarily for SEO reasons in ~2015. [See this GitHub issue](https://github.com/rmaake1/httpstatuses/issues/29). httpstatus.es was then set to redirect to httpstatuses.com going forward. That redirect contiues to today, [httpstatus.es](https://httpstatus.es) now redirects to the WebpageFX domain.
