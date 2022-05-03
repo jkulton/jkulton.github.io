@@ -6,8 +6,6 @@ description: After learning what happened to the site, I revived httpstatuses on
 permalink: /:year/:title
 ---
 
----
-
 ## Background
 
 In early 2022 the [httpstatuses.com](https://httpstatuses.com/) domain started redirecting to a web agency's site instead of serving the simple and useful site it [once had](https://web.archive.org/web/20220208004002/https://httpstatuses.com/).
