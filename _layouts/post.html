@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }} | Jon Kulton</title>
-    <meta name="title" property="og:title" content="Jon Kulton" />
+    <meta name="title" property="og:title" content="{{ page.title }} | Jon Kulton" />
     <meta name="description" property="og:description" content="{{ page.description }}" />
     <meta name="type" property="og:type" content="website" />
-    <meta name="url" property="og:url" content="https://jkulton.com" />
     <meta name="author" content="Jon Kulton" />
+    <meta name="url" content="{{ site.url }}{{ page.url }}" property="og:url">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
