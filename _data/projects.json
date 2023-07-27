@@ -1,5 +1,12 @@
 [
   {
+    "title": "Topical",
+    "link": "https://topical-go.herokuapp.com",
+    "image": "/assets/images/topical.png",
+    "description": "A (very) minimalist message board written in Go",
+    "tags": ["Go"]
+  },
+  {
     "title": "Gistdoc",
     "link": "https://gistdoc.com",
     "image": "/assets/images/gistdoc.png",
@@ -14,24 +21,10 @@
     "tags": ["JavaScript"]
   },
   {
-    "title": "Topical",
-    "link": "https://topical-go.herokuapp.com",
-    "image": "/assets/images/topical.png",
-    "description": "A (very) minimalist message board written in Go",
-    "tags": ["Go"]
-  },
-  {
     "title": "Mothership",
     "link": "https://mothership.live",
     "image": "/assets/images/mothership.png",
     "description": "An open source and self hosted platform-as-a-service",
     "tags": ["Node.js", "Docker"]
-  },
-  {
-    "title": "Ditto",
-    "link": "https://github.com/jkulton/ditto",
-    "image": "/assets/images/ditto.png",
-    "description": "A simple mock API for prototyping, testing, or fun",
-    "tags": ["TypeScript", "Cloudflare Workers"]
   }
 ]
