@@ -2,14 +2,11 @@
 layout: default
 ---
 
-<h2 class="mt-8 mb-1 font-serif text-xl">👋 Hey, I'm Jon</h2>
+<p class="my-6 home-intro">👋 Hey, I'm Jon. I'm a Software Engineer. Right now I work at <a href="https://datadoghq.com" class="text-indigo-600 hover:underline">Datadog</a>, where I'm helping improve the reliability of the Metrics product.</p>
 
-<p class="my-3 home-intro">I'm a Software Engineer, and right now I work at <a href="https://datadoghq.com" class="text-indigo-600 hover:underline">Datadog</a> where I'm helping improve the reliability of the Metrics product. I have interests across the entire engineering stack, and I'm always up for working on something new.</p>
+<hr class="my-6">
 
-
-<hr class="my-7">
-
-<h3 class="mt-2 mb-5 font-serif text-xl">Writing</h3>
+<h3 class="mb-3 font-serif text-xl">Writing</h3>
 
 <ul>
   {% for post in site.posts %}
@@ -20,10 +17,9 @@ layout: default
   {% endfor %}
 </ul>
  
+<hr class="my-6">
 
-<hr class="my-7">
-
-<h3 class="mt-2 mb-5 font-serif text-xl">Projects</h3>
+<h3 class="mb-3 font-serif text-xl">Projects</h3>
 
 <ul>
   {% for item in site.data.projects limit: 4 %}
