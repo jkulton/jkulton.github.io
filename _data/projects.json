@@ -1,7 +1,7 @@
 [
   {
     "title": "Topical",
-    "link": "https://topical-go.herokuapp.com",
+    "link": "https://github.com/jkulton/topical",
     "image": "/assets/images/topical.png",
     "description": "A (very) minimalist message board written in Go",
     "tags": ["Go"]
@@ -15,7 +15,7 @@
   },
   {
     "title": "QR Bouncer",
-    "link": "https://qrbouncer.com",
+    "link": "https://github.com/jkulton/qr-bouncer",
     "image": "/assets/images/qr-bouncer.png",
     "description": "Generate a shareable, Coinbase-style bouncing QR code",
     "tags": ["JavaScript"]
