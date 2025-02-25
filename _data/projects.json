@@ -1,5 +1,11 @@
 [
   {
+    "title": "golinks",
+    "link": "https://github.com/jkulton/golinks",
+    "description": "Personal golinks in your Chrome-based browser",
+    "tags": ["JavaScript", "Chrome Extension"]
+  },
+  {
     "title": "Topical",
     "link": "https://github.com/jkulton/topical",
     "image": "/assets/images/topical.png",

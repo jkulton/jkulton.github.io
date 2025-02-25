@@ -22,14 +22,10 @@ layout: default
 <h3 class="mb-3 font-serif text-xl">Projects</h3>
 
 <ul>
-  {% for item in site.data.projects limit: 4 %}
+  {% for item in site.data.projects limit: 10 %}
     <li class="flex justify-between items-center my-3 flex-wrap sm:flex-nowrap">
       <a class="text-indigo-600 basis-full sm:basis-auto hover:underline" href="{{ item.link }}">{{ item.title }}</a>
       <div class="text-sm text-slate-600">{{ item.description }}</div>
     </li>
   {% endfor %}
-
-  <li class="flex justify-between items-center my-3">
-    <a class="text-indigo-600 hover:underline" href="/projects">All projects →</a>
-  </li>
 </ul>
